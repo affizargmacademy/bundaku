@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <title>Produk - BUNDAKU | Kue Kering, Hampers & Parcel Hari Raya</title>
+  <meta name="description"
+    content="Produk BUNDAKU: Nastar, Kastengel, Putri Salju, Lapis Legit, Hampers premium. Filter kategori, cari produk, tambah ke keranjang, dan checkout (demo)." />
+  <meta name="keywords"
+    content="produk bundaku, kue lebaran, nastar, kastengel, putri salju, lapis legit, hampers lebaran, parcel, toko kue hari raya" />
+  <meta name="author" content="BUNDAKU Team" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#FB4A36" />
+
+  <link rel="canonical" href="https://www.bundaku.com/produk.html" />
+  <link rel="alternate" href="https://www.bundaku.com/produk.html" hreflang="id-ID" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.bundaku.com/produk.html" />
+  <meta property="og:title" content="Produk - BUNDAKU" />
+  <meta property="og:description" content="Filter kategori, cari produk, dan pesan kue Hari Raya premium & hampers cantik." />
+  <meta property="og:image" content="https://via.placeholder.com/1200x630?text=PRODUK+BUNDAKU" />
+  <meta property="og:locale" content="id_ID" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://www.bundaku.com/produk.html" />
+  <meta name="twitter:title" content="Produk - BUNDAKU" />
+  <meta name="twitter:description" content="Filter kategori, cari produk, dan pesan kue Hari Raya premium & hampers cantik." />
+  <meta name="twitter:image" content="https://via.placeholder.com/1200x630?text=PRODUK+BUNDAKU" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="https://via.placeholder.com/32/FB4A36/ffffff?text=B" />
+  <link rel="icon" type="image/png" sizes="16x16" href="https://via.placeholder.com/16/FB4A36/ffffff?text=B" />
+  <link rel="apple-touch-icon" sizes="180x180" href="https://via.placeholder.com/180/FB4A36/ffffff?text=B" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="//images.unsplash.com" />
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
+  <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <style>
+    :root{
+      --primary-red:#FB4A36;
+      --bg-grey:#D0CEC8;
+      --text-black:#131313;
+      --bg-offwhite:#FFFCF5;
+      --font-main:'Lexend',sans-serif;
+    }
+
+    body{
+      font-family:var(--font-main);
+      background-color:var(--bg-offwhite);
+      color:var(--text-black);
+      overflow-x:hidden;
+    }
+
+    a{ text-decoration:none; }
+    h1,h2,h3,h4,h5,h6{ font-weight:600; }
+
+    /* NAVBAR (SAMA) */
+    .navbar{ padding-top:20px; background-color:transparent; }
+    .navbar-brand{
+      font-weight:700; font-size:1.5rem; color:var(--text-black)!important;
+    }
+    .nav-link{
+      color:var(--text-black)!important;
+      font-weight:400;
+      margin:0 10px;
+    }
+    .nav-link:hover,.nav-link.active{ color:var(--primary-red)!important; }
+    .navbar-icons i{
+      margin-left:15px; cursor:pointer; transition:.3s; position:relative;
+    }
+    .navbar-icons i:hover{ color:var(--primary-red); }
+    .cart-badge{
+      position:absolute; top:-8px; right:-10px;
+      font-size:.65rem; padding:2px 6px; border-radius:999px;
+      background:var(--primary-red); color:#fff; display:none;
+      line-height:1.2; min-width:18px; text-align:center;
+    }
+
+    /* TAGLINE */
+    .tagline{
+      display:inline-block;
+      background:#fff;
+      border:1px solid rgba(0,0,0,0.06);
+      padding:6px 14px;
+      border-radius:999px;
+      font-size:.75rem;
+      letter-spacing:1.5px;
+      text-transform:uppercase;
+      color:#8a8a8a;
+      margin-bottom:14px;
+    }
+
+    /* BUTTON */
+    .btn-primary-custom{
+      background:#FB4A36;
+      color:#fff;
+      padding:12px 30px;
+      border-radius:999px;
+      border:none;
+      font-weight:800;
+      transition:.25s;
+      box-shadow:0 16px 30px rgba(251,74,54,.20);
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+    }
+    .btn-primary-custom:hover{
+      transform:translateY(-1px);
+      box-shadow:0 20px 40px rgba(251,74,54,.26);
+      color:#fff;
+    }
+
+    /* HERO PRODUK */
+    .produk-hero{
+      padding:70px 0 28px;
+    }
+    .produk-hero-title{
+      font-size:3.0rem;
+      line-height:1.05;
+      font-weight:900;
+      margin-bottom:12px;
+    }
+    .produk-hero-desc{
+      color:#6a6a6a;
+      max-width:720px;
+      margin-bottom:0;
+      font-size:1.02rem;
+    }
+
+    /* WRAPPER 2 KOLOM */
+    .produk-wrapper{ padding:30px 0 20px; }
+    .produk-grid{
+      display:grid;
+      grid-template-columns:330px 1fr;
+      gap:34px;
+      align-items:start;
+    }
+
+    /* KIRI NAV KATEGORI */
+    .menu-nav{ padding:0; border:none; margin:0; }
+    .menu-nav .menu-list{
+      list-style:none;
+      padding:18px;
+      margin:0;
+      background:#fff;
+      border-radius:18px;
+      border:1px solid rgba(0,0,0,0.06);
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      position:sticky;
+      top:18px;
+    }
+    .menu-nav .menu-list li{
+      width:100%;
+      padding:12px 14px;
+      border-radius:14px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      font-weight:800;
+      letter-spacing:1px;
+      font-size:.92rem;
+      color:#131313;
+      cursor:pointer;
+      transition:.2s;
+      text-transform:uppercase;
+      user-select:none;
+    }
+    .menu-nav .menu-list li i{ color:#9a9a9a; transition:.2s; }
+    .menu-nav .menu-list li:hover{
+      background:rgba(251,74,54,.08);
+      color:#FB4A36;
+    }
+    .menu-nav .menu-list li:hover i{ color:#FB4A36; }
+    .menu-nav .menu-list li.active{
+      background:#FB4A36;
+      color:#fff;
+    }
+    .menu-nav .menu-list li.active i{ color:#fff; }
+
+    /* KANAN: GRID PRODUK */
+    .produk-content .produk-desc{
+      color:#6a6a6a;
+      margin-bottom:18px;
+      max-width:900px;
+    }
+
+    .product-item.is-hidden{ display:none!important; }
+
+    .food-card{
+      background:#fff;
+      border-radius:20px;
+      padding:18px;
+      border:1px solid rgba(0,0,0,0.06);
+      transition:.25s;
+      height:100%;
+    }
+    .food-card:hover{
+      box-shadow:0 12px 28px rgba(0,0,0,0.06);
+      transform:translateY(-3px);
+    }
+
+    .food-img{
+      width:100%!important;
+      height:180px!important;
+      border-radius:16px!important;
+      object-fit:cover!important;
+      background:#f1f1f1;
+      border:1px solid rgba(0,0,0,0.08);
+      padding:6px;
+      display:block;
+      margin-bottom:12px;
+    }
+
+    .food-title{ font-size:1rem; font-weight:800; margin-bottom:6px; }
+    .food-price{ font-weight:900; font-size:1.1rem; color:#131313; margin-bottom:12px; display:block; }
+
+    .btn-add-cart{
+      font-size:.85rem;
+      color:#666;
+      text-decoration:none;
+      border:1px solid rgba(0,0,0,0.08);
+      padding:9px 14px;
+      border-radius:999px;
+      transition:.25s;
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      background:#fff;
+    }
+    .btn-add-cart:hover{
+      background:#131313;
+      color:#fff;
+      border-color:#131313;
+    }
+
+    /* Floating WA */
+    .wa-float{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      z-index:9999;
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+    .wa-float .wa-tooltip{
+      background:#fff;
+      border:1px solid rgba(0,0,0,0.06);
+      box-shadow:0 10px 25px rgba(0,0,0,0.08);
+      padding:10px 12px;
+      border-radius:14px;
+      font-size:.85rem;
+      color:#333;
+      display:none;
+      white-space:nowrap;
+    }
+    .wa-float:hover .wa-tooltip{ display:inline-block; }
+    .wa-float .wa-btn{
+      width:54px;
+      height:54px;
+      border-radius:999px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      background:#25D366;
+      color:#fff;
+      border:none;
+      box-shadow:0 15px 25px rgba(0,0,0,0.15);
+      transition:transform .2s ease;
+    }
+    .wa-float .wa-btn:hover{ transform:translateY(-2px); }
+
+    /* RESPONSIVE */
+    @media (max-width: 991px){
+      .produk-hero-title{ font-size:2.25rem; }
+      .produk-grid{ grid-template-columns:1fr; }
+
+      .menu-nav .menu-list{
+        position:static;
+        flex-direction:row;
+        flex-wrap:wrap;
+        gap:10px;
+        padding:0;
+        background:transparent;
+        border:none;
+      }
+      .menu-nav .menu-list li{
+        width:auto;
+        border:1px solid rgba(0,0,0,0.06);
+        background:#fff;
+        border-radius:999px;
+        padding:8px 12px;
+        justify-content:flex-start;
+        gap:8px;
+        letter-spacing:.8px;
+      }
+      .menu-nav .menu-list li.active{
+        border-color:#FB4A36;
+      }
+
+      .navbar-collapse{
+        background:#fff;
+        padding:20px;
+        border-radius:10px;
+        margin-top:10px;
+        box-shadow:0 5px 20px rgba(0,0,0,0.1);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR (SAMA) -->
+  <nav class="navbar navbar-expand-lg" id="home">
+    <div class="container">
+      <a class="navbar-brand" href="index.html#home" aria-label="BUNDAKU Beranda">
+        <i class="fa-solid fa-cookie-bite text-danger"></i> BUNDAKU
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-label="Toggle navigasi">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="tentang-kami.html">Tentang Kami</a></li>
+          <li class="nav-item"><a class="nav-link active" href="produk.html">Produk</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+
+      <div class="navbar-icons d-none d-lg-block">
+        <i class="fa-solid fa-magnifying-glass" role="button" tabindex="0" aria-label="Cari produk"
+          data-bs-toggle="modal" data-bs-target="#searchModal"></i>
+        <i class="fa-solid fa-cart-shopping" role="button" tabindex="0" aria-label="Keranjang"
+          data-bs-toggle="offcanvas" data-bs-target="#cartCanvas">
+          <span class="cart-badge" id="cartBadge">0</span>
+        </i>
+        <i class="fa-regular fa-user" role="button" tabindex="0" aria-label="Akun"
+          data-bs-toggle="modal" data-bs-target="#accountModal"></i>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO PRODUK -->
+  <section class="produk-hero" id="produkHero">
+    <div class="container">
+  
+      <div class="d-flex flex-column flex-lg-row justify-content-between align-items-start gap-3">
+        <!-- KIRI: Judul + Deskripsi -->
+        <div>
+          <div class="tagline">Produk Bundaku</div>
+          <h1 class="produk-hero-title">Pilih kue favoritmu,<br>siap jadi hampers cantik.</h1>
+
+        </div>
+  
+
+  
+    </div>
+  </section>
+  
+
+  <!-- PRODUK (NAV KIRI + GRID KANAN) -->
+  <section class="produk-wrapper" id="produk">
+    <div class="container">
+      <div class="produk-grid">
+
+        <!-- KIRI: NAV KATEGORI -->
+        <aside>
+          <section class="menu-nav" id="menu">
+            <ul class="menu-list" id="categoryList">
+              <li class="active" data-filter="ALL">SEMUA <i class="fa-solid fa-arrow-right-long"></i></li>
+              <li data-filter="KUE_KERING">KUE KERING <i class="fa-solid fa-arrow-right-long"></i></li>
+              <li data-filter="KUE_BASAH">KUE BASAH <i class="fa-solid fa-arrow-right-long"></i></li>
+              <li data-filter="LAPIS">LAPIS <i class="fa-solid fa-arrow-right-long"></i></li>
+              <li data-filter="HAMPERS">HAMPERS <i class="fa-solid fa-arrow-right-long"></i></li>
+              <li data-filter="PREMIUM">PREMIUM <i class="fa-solid fa-arrow-right-long"></i></li>
+              <li data-filter="BESTSELLER">BESTSELLER <i class="fa-solid fa-arrow-right-long"></i></li>
+              <li data-filter="PROMO">PROMO <i class="fa-solid fa-arrow-right-long"></i></li>
+            </ul>
+          </section>
+        </aside>
+
+        <!-- KANAN: GRID -->
+        <main class="produk-content">
+
+
+          <section class="pb-5" id="products">
+            <div class="row g-3" id="productGrid">
+
+              <!-- ==== ITEM PRODUK (boleh tambah sendiri) ==== -->
+
+              <div class="col-6 col-md-4 col-lg-3 product-item" data-category="KUE_KERING BESTSELLER">
+                <div class="food-card">
+                  <img class="food-img"
+                    src="https://images.unsplash.com/photo-1606509036992-4399d5c5afe4?auto=format&fit=crop&w=900&q=80"
+                    alt="Nastar Premium" loading="lazy" decoding="async" />
+                  <h5 class="food-title">Nastar Premium</h5>
+                  <span class="food-price">Rp 125.000</span>
+                  <a href="#" class="btn-add-cart" data-name="Nastar Premium" data-price="125000">
+                    <i class="fa-solid fa-bag-shopping"></i> Tambah Keranjang
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 col-lg-3 product-item" data-category="KUE_KERING PREMIUM">
+                <div class="food-card">
+                  <img class="food-img"
+                    src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=900&q=80"
+                    alt="Kastengel Keju" loading="lazy" decoding="async" />
+                  <h5 class="food-title">Kastengel Keju</h5>
+                  <span class="food-price">Rp 135.000</span>
+                  <a href="#" class="btn-add-cart" data-name="Kastengel Keju" data-price="135000">
+                    <i class="fa-solid fa-bag-shopping"></i> Tambah Keranjang
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 col-lg-3 product-item" data-category="KUE_KERING BESTSELLER">
+                <div class="food-card">
+                  <img class="food-img"
+                    src="https://images.unsplash.com/photo-1604908554022-12f95a6f12e8?auto=format&fit=crop&w=900&q=80"
+                    alt="Putri Salju Lumer" loading="lazy" decoding="async" />
+                  <h5 class="food-title">Putri Salju Lumer</h5>
+                  <span class="food-price">Rp 120.000</span>
+                  <a href="#" class="btn-add-cart" data-name="Putri Salju Lumer" data-price="120000">
+                    <i class="fa-solid fa-bag-shopping"></i> Tambah Keranjang
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 col-lg-3 product-item" data-category="LAPIS PREMIUM">
+                <div class="food-card">
+                  <img class="food-img"
+                    src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec?auto=format&fit=crop&w=900&q=80"
+                    alt="Lapis Legit" loading="lazy" decoding="async" />
+                  <h5 class="food-title">Lapis Legit</h5>
+                  <span class="food-price">Rp 220.000</span>
+                  <a href="#" class="btn-add-cart" data-name="Lapis Legit" data-price="220000">
+                    <i class="fa-solid fa-bag-shopping"></i> Tambah Keranjang
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 col-lg-3 product-item" data-category="HAMPERS PROMO">
+                <div class="food-card">
+                  <img class="food-img"
+                    src="https://images.unsplash.com/photo-1542826438-bd32f43d626f?auto=format&fit=crop&w=900&q=80"
+                    alt="Hampers Mini" loading="lazy" decoding="async" />
+                  <h5 class="food-title">Hampers Mini</h5>
+                  <span class="food-price">Rp 199.000</span>
+                  <a href="#" class="btn-add-cart" data-name="Hampers Mini" data-price="199000">
+                    <i class="fa-solid fa-bag-shopping"></i> Tambah Keranjang
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 col-lg-3 product-item" data-category="HAMPERS PREMIUM">
+                <div class="food-card">
+                  <img class="food-img"
+                    src="https://images.unsplash.com/photo-1523293836415-57c8a3fc2f0b?auto=format&fit=crop&w=900&q=80"
+                    alt="Hampers Keluarga" loading="lazy" decoding="async" />
+                  <h5 class="food-title">Hampers Keluarga</h5>
+                  <span class="food-price">Rp 349.000</span>
+                  <a href="#" class="btn-add-cart" data-name="Hampers Keluarga" data-price="349000">
+                    <i class="fa-solid fa-bag-shopping"></i> Tambah Keranjang
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 col-lg-3 product-item" data-category="KUE_BASAH PROMO">
+                <div class="food-card">
+                  <img class="food-img"
+                    src="https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&w=900&q=80"
+                    alt="Brownies Cokelat" loading="lazy" decoding="async" />
+                  <h5 class="food-title">Brownies Cokelat</h5>
+                  <span class="food-price">Rp 95.000</span>
+                  <a href="#" class="btn-add-cart" data-name="Brownies Cokelat" data-price="95000">
+                    <i class="fa-solid fa-bag-shopping"></i> Tambah Keranjang
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4 col-lg-3 product-item" data-category="KUE_BASAH">
+                <div class="food-card">
+                  <img class="food-img"
+                    src="https://images.unsplash.com/photo-1601972599720-bd8c65f9a5e5?auto=format&fit=crop&w=900&q=80"
+                    alt="Bolu Jadul" loading="lazy" decoding="async" />
+                  <h5 class="food-title">Bolu Jadul</h5>
+                  <span class="food-price">Rp 85.000</span>
+                  <a href="#" class="btn-add-cart" data-name="Bolu Jadul" data-price="85000">
+                    <i class="fa-solid fa-bag-shopping"></i> Tambah Keranjang
+                  </a>
+                </div>
+              </div>
+
+              <!-- ==== /ITEM ==== -->
+
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER (SAMA) -->
+  <footer class="py-5 bg-light mt-4" id="contact">
+    <div class="container">
+      <div class="row g-4 align-items-start">
+        <div class="col-md-4">
+          <h5 class="mb-3"><i class="fa-solid fa-cookie-bite text-danger"></i> BUNDAKU</h5>
+          <p class="text-muted mb-3">
+            Toko kue Hari Raya yang fokus pada rasa, kualitas, dan kemasan hampers yang elegan.
+          </p>
+          <div class="d-flex gap-3">
+            <a href="#" class="text-dark" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="text-dark" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="text-dark" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <h6 class="mb-3">Kontak</h6>
+          <p class="text-muted mb-1"><i class="fa-solid fa-location-dot me-2"></i> Jalan Kue No. 1, Jakarta</p>
+          <p class="text-muted mb-1"><i class="fa-solid fa-clock me-2"></i> 08.00 - 21.00 (Setiap Hari)</p>
+          <p class="text-muted mb-3"><i class="fa-solid fa-phone me-2"></i> +62 000-0000-0000</p>
+          <button class="btn btn-dark btn-sm" data-bs-toggle="modal" data-bs-target="#contactModal">Kirim Pesan</button>
+        </div>
+
+        <div class="col-md-4">
+          <h6 class="mb-3">Berlangganan Promo</h6>
+          <p class="text-muted">Dapatkan info promo hampers dan jadwal PO kue Hari Raya.</p>
+          <form id="subscribeForm" class="d-flex gap-2">
+            <input type="email" class="form-control" placeholder="Email kamu" required />
+            <button class="btn btn-danger" type="submit">Daftar</button>
+          </form>
+          <small class="text-muted d-block mt-2" id="subscribeMsg"></small>
+        </div>
+      </div>
+
+      <hr class="my-4" />
+      <div class="text-center">
+        <p class="mb-0 text-muted">&copy; 2026 BUNDAKU. Semua hak dilindungi.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WA FLOAT (SAMA) -->
+  <div class="wa-float" aria-label="WhatsApp BUNDAKU">
+    <span class="wa-tooltip">Chat WhatsApp untuk order</span>
+    <a class="wa-btn"
+      href="https://wa.me/6281200000000?text=Halo%20BUNDAKU,%20saya%20mau%20pesan%20produk%20kue%20Hari%20Raya.%20Bisa%20dibantu%3F"
+      target="_blank" rel="noopener noreferrer" aria-label="Chat WhatsApp">
+      <i class="fa-brands fa-whatsapp" style="font-size: 1.5rem;"></i>
+    </a>
+  </div>
+
+  <!-- MODAL + OFFCANVAS (SAMA / disesuaikan agar search ngefilter produk di page ini) -->
+  <!-- Search Modal -->
+  <div class="modal fade" id="searchModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-4">
+        <div class="modal-header">
+          <h5 class="modal-title">Cari Produk</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+        </div>
+        <div class="modal-body">
+          <input type="text" class="form-control" id="searchInput" placeholder="Ketik nama produk... (contoh: Nastar)" />
+          <small class="text-muted d-block mt-2" id="searchHint">Hasil akan langsung difilter di daftar produk.</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Account Modal -->
+  <div class="modal fade" id="accountModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-4">
+        <div class="modal-header">
+          <h5 class="modal-title">Akun</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+        </div>
+        <div class="modal-body">
+          <form id="loginForm">
+            <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" required placeholder="nama@email.com" />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Password</label>
+              <input type="password" class="form-control" required placeholder="••••••••" />
+            </div>
+            <button class="btn btn-danger w-100" type="submit">Masuk</button>
+            <small class="text-muted d-block mt-2">*Demo: tombol aktif, menampilkan notifikasi.</small>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart Offcanvas -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="cartCanvas" aria-labelledby="cartCanvasLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="cartCanvasLabel">Keranjang</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Tutup"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div id="cartItems" class="mb-3"></div>
+      <div class="d-flex justify-content-between align-items-center border-top pt-3">
+        <strong>Total</strong>
+        <strong id="cartTotal">Rp 0</strong>
+      </div>
+      <button class="btn btn-danger w-100 mt-3" id="btnCheckout" type="button">Checkout</button>
+      <button class="btn btn-outline-dark w-100 mt-2" id="btnClearCart" type="button">Kosongkan Keranjang</button>
+      <small class="text-muted d-block mt-2">*Checkout demo: menampilkan ringkasan order.</small>
+    </div>
+  </div>
+
+  <!-- Contact Modal -->
+  <div class="modal fade" id="contactModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-4">
+        <div class="modal-header">
+          <h5 class="modal-title">Kirim Pesan</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+        </div>
+        <div class="modal-body">
+          <form id="contactForm">
+            <div class="mb-3">
+              <label class="form-label">Nama</label>
+              <input type="text" class="form-control" required placeholder="Nama kamu" />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">No. WhatsApp</label>
+              <input type="tel" class="form-control" required placeholder="08xxxxxxxxxx" />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Pesan</label>
+              <textarea class="form-control" rows="3" required placeholder="Saya mau pesan..."></textarea>
+            </div>
+            <button class="btn btn-danger w-100" type="submit">Kirim</button>
+            <small class="text-muted d-block mt-2">*Demo: tombol aktif, menampilkan notifikasi.</small>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Util: format Rupiah
+    function formatRupiah(num) {
+      const n = Number(num) || 0;
+      return 'Rp ' + n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+    }
+
+    // State cart (localStorage)
+    const CART_KEY = 'bundaku_cart_v1';
+    let cart = [];
+
+    function loadCart() {
+      try {
+        const raw = localStorage.getItem(CART_KEY);
+        cart = raw ? JSON.parse(raw) : [];
+      } catch (e) { cart = []; }
+    }
+    function saveCart() { localStorage.setItem(CART_KEY, JSON.stringify(cart)); }
+    function cartCount() { return cart.reduce((sum, item) => sum + item.qty, 0); }
+    function cartTotal() { return cart.reduce((sum, item) => sum + (item.price * item.qty), 0); }
+
+    function updateBadge() {
+      const badge = document.getElementById('cartBadge');
+      if (!badge) return;
+      const count = cartCount();
+      badge.textContent = count;
+      badge.style.display = count > 0 ? 'inline-block' : 'none';
+    }
+
+    function renderCart() {
+      const wrap = document.getElementById('cartItems');
+      const totalEl = document.getElementById('cartTotal');
+      if (!wrap || !totalEl) return;
+
+      if (!cart.length) {
+        wrap.innerHTML = '<div class="text-muted">Keranjang masih kosong.</div>';
+        totalEl.textContent = formatRupiah(0);
+        return;
+      }
+
+      wrap.innerHTML = cart.map((item, idx) => `
+        <div class="d-flex align-items-center justify-content-between border rounded-4 p-3 mb-2">
+          <div>
+            <div class="fw-semibold">${item.name}</div>
+            <div class="text-muted" style="font-size:0.9rem;">${formatRupiah(item.price)} x ${item.qty}</div>
+          </div>
+          <div class="d-flex align-items-center gap-2">
+            <button class="btn btn-sm btn-outline-dark" data-action="dec" data-idx="${idx}" aria-label="Kurangi">-</button>
+            <button class="btn btn-sm btn-outline-dark" data-action="inc" data-idx="${idx}" aria-label="Tambah">+</button>
+            <button class="btn btn-sm btn-danger" data-action="del" data-idx="${idx}" aria-label="Hapus">
+              <i class="fa-solid fa-trash"></i>
+            </button>
+          </div>
+        </div>
+      `).join('');
+
+      totalEl.textContent = formatRupiah(cartTotal());
+    }
+
+    function addToCart(name, price) {
+      const found = cart.find(x => x.name === name);
+      if (found) found.qty += 1;
+      else cart.push({ name, price: Number(price), qty: 1 });
+      saveCart();
+      updateBadge();
+      renderCart();
+    }
+
+    function bindCartActions() {
+      const cartItems = document.getElementById('cartItems');
+      const btnClear = document.getElementById('btnClearCart');
+      const btnCheckout = document.getElementById('btnCheckout');
+
+      cartItems && cartItems.addEventListener('click', (e) => {
+        const btn = e.target.closest('button[data-action]');
+        if (!btn) return;
+        const action = btn.getAttribute('data-action');
+        const idx = Number(btn.getAttribute('data-idx'));
+        if (Number.isNaN(idx) || !cart[idx]) return;
+
+        if (action === 'inc') cart[idx].qty += 1;
+        if (action === 'dec') cart[idx].qty = Math.max(1, cart[idx].qty - 1);
+        if (action === 'del') cart.splice(idx, 1);
+
+        saveCart();
+        updateBadge();
+        renderCart();
+      });
+
+      btnClear && btnClear.addEventListener('click', () => {
+        cart = [];
+        saveCart();
+        updateBadge();
+        renderCart();
+        alert('Keranjang dikosongkan.');
+      });
+
+      btnCheckout && btnCheckout.addEventListener('click', () => {
+        if (!cart.length) { alert('Keranjang masih kosong.'); return; }
+        const ringkasan = cart.map(x => `- ${x.name} x ${x.qty} (${formatRupiah(x.price * x.qty)})`).join('\n');
+        alert(`Ringkasan Pesanan:\n${ringkasan}\n\nTotal: ${formatRupiah(cartTotal())}\n\nLanjutkan via WhatsApp untuk konfirmasi pembayaran/pengiriman.`);
+      });
+    }
+
+    function bindAddButtons() {
+      document.querySelectorAll('.btn-add-cart').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          addToCart(btn.getAttribute('data-name'), btn.getAttribute('data-price'));
+        });
+      });
+    }
+
+    function bindForms() {
+      const loginForm = document.getElementById('loginForm');
+      const contactForm = document.getElementById('contactForm');
+      const subscribeForm = document.getElementById('subscribeForm');
+
+      loginForm && loginForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Berhasil (demo): kamu sudah masuk.');
+        const modal = bootstrap.Modal.getInstance(document.getElementById('accountModal'));
+        modal?.hide();
+      });
+
+      contactForm && contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Pesan terkirim (demo). Untuk respon cepat, gunakan WhatsApp.');
+        const modal = bootstrap.Modal.getInstance(document.getElementById('contactModal'));
+        modal?.hide();
+      });
+
+      subscribeForm && subscribeForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const msg = document.getElementById('subscribeMsg');
+        if (msg) msg.textContent = 'Terima kasih! Kamu sudah terdaftar untuk info promo.';
+        e.target.reset();
+      });
+    }
+
+    // Filter kategori
+    function bindCategoryFilter() {
+      const categoryList = document.getElementById('categoryList');
+      const items = Array.from(document.querySelectorAll('#productGrid .product-item'));
+      if (!categoryList || !items.length) return;
+
+      categoryList.addEventListener('click', (e) => {
+        const li = e.target.closest('li[data-filter]');
+        if (!li) return;
+
+        categoryList.querySelectorAll('li').forEach(x => x.classList.remove('active'));
+        li.classList.add('active');
+
+        const filter = (li.getAttribute('data-filter') || 'ALL').toUpperCase();
+        items.forEach(card => {
+          const cat = (card.getAttribute('data-category') || '').toUpperCase();
+          const show = (filter === 'ALL') ? true : cat.includes(filter);
+          card.classList.toggle('is-hidden', !show);
+        });
+      });
+    }
+
+    // Search produk: filter realtime (menghormati filter kategori yang aktif)
+    function bindSearch() {
+      const input = document.getElementById('searchInput');
+      const items = Array.from(document.querySelectorAll('#productGrid .product-item'));
+      const categoryList = document.getElementById('categoryList');
+
+      if (!input || !items.length) return;
+
+      function getActiveFilter() {
+        const active = categoryList?.querySelector('li.active');
+        return (active?.getAttribute('data-filter') || 'ALL').toUpperCase();
+      }
+
+      function applySearch() {
+        const q = (input.value || '').toLowerCase().trim();
+        const activeFilter = getActiveFilter();
+
+        items.forEach(card => {
+          const title = (card.querySelector('.food-title')?.textContent || '').toLowerCase();
+          const cat = (card.getAttribute('data-category') || '').toUpperCase();
+
+          const matchCategory = (activeFilter === 'ALL') ? true : cat.includes(activeFilter);
+          const matchSearch = (!q) ? true : title.includes(q);
+
+          card.classList.toggle('is-hidden', !(matchCategory && matchSearch));
+        });
+      }
+
+      input.addEventListener('input', applySearch);
+
+      // kalau kategori berubah, search tetap berlaku
+      categoryList?.addEventListener('click', () => setTimeout(applySearch, 0));
+
+      // reset ketika modal ditutup
+      const modalEl = document.getElementById('searchModal');
+      modalEl?.addEventListener('hidden.bs.modal', () => {
+        input.value = '';
+        applySearch();
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      loadCart();
+      updateBadge();
+      renderCart();
+
+      bindCartActions();
+      bindAddButtons();
+      bindForms();
+      bindCategoryFilter();
+      bindSearch();
+    });
+  </script>
+</body>
+</html>

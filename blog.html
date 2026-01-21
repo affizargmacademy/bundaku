@@ -1,0 +1,669 @@
+<!-- BLOG - BUNDAKU -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <title>Blog - BUNDAKU | Tips Kue Hari Raya & Hampers</title>
+  <meta name="description" content="Blog BUNDAKU: tips kue Hari Raya, panduan hampers, cara simpan kue, dan inspirasi parcel." />
+  <meta name="keywords" content="blog bundaku, tips kue lebaran, cara simpan nastar, hampers lebaran, parcel, kue hari raya" />
+  <meta name="author" content="BUNDAKU Team" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#FB4A36" />
+
+  <link rel="canonical" href="https://www.bundaku.com/blog.html" />
+  <link rel="alternate" href="https://www.bundaku.com/blog.html" hreflang="id-ID" />
+
+  <!-- Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="//images.unsplash.com" />
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
+  <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Icons + Bootstrap -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <style>
+    :root{
+      --primary-red:#FB4A36;
+      --text-black:#131313;
+      --bg-offwhite:#FFFCF5;
+      --font-main:'Lexend', sans-serif;
+    }
+    body{
+      font-family:var(--font-main);
+      background:var(--bg-offwhite);
+      color:var(--text-black);
+      overflow-x:hidden;
+    }
+    a{ text-decoration:none; }
+
+    /* ===== NAVBAR (SAMA) ===== */
+    .navbar{ padding-top:20px; background-color:transparent; }
+    .navbar-brand{
+      font-weight:700; font-size:1.5rem; color:var(--text-black)!important;
+    }
+    .nav-link{ color:var(--text-black)!important; font-weight:400; margin:0 10px; }
+    .nav-link:hover,.nav-link.active{ color:var(--primary-red)!important; }
+
+    .navbar-icons i{
+      margin-left:15px; cursor:pointer; transition:.3s; position:relative;
+    }
+    .navbar-icons i:hover{ color:var(--primary-red); }
+    .cart-badge{
+      position:absolute; top:-8px; right:-10px;
+      font-size:.65rem; padding:2px 6px; border-radius:999px;
+      background:var(--primary-red); color:#fff; display:none;
+      line-height:1.2; min-width:18px; text-align:center;
+    }
+
+    /* ===== SHARED BUTTON ===== */
+    .btn-primary-custom{
+      background:var(--primary-red);
+      color:#fff;
+      padding:12px 30px;
+      border-radius:999px;
+      border:none;
+      font-weight:800;
+      transition:.25s;
+      box-shadow:0 16px 30px rgba(251,74,54,.20);
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+    }
+    .btn-primary-custom:hover{
+      transform:translateY(-1px);
+      box-shadow:0 20px 40px rgba(251,74,54,.26);
+      color:#fff;
+    }
+
+    .tagline{
+      display:inline-block;
+      background:#fff;
+      border:1px solid rgba(0,0,0,.06);
+      padding:6px 14px;
+      border-radius:999px;
+      font-size:.75rem;
+      letter-spacing:1.5px;
+      text-transform:uppercase;
+      color:#8a8a8a;
+      margin-bottom:14px;
+    }
+
+    /* ===== BLOG HERO ===== */
+    .blog-hero{ padding:70px 0 30px; }
+    .blog-title{
+      font-size:3.05rem;
+      line-height:1.05;
+      font-weight:900;
+      margin-bottom:12px;
+    }
+    .blog-desc{
+      max-width:760px;
+      color:#6a6a6a;
+      font-size:1.02rem;
+      margin-bottom:0;
+    }
+
+    /* ===== BLOG GRID 9 BOX ===== */
+    .blog-grid{ padding:22px 0 40px; }
+    .blog-card{
+      background:#fff;
+      border:1px solid rgba(0,0,0,.06);
+      border-radius:18px;
+      padding:16px;
+      box-shadow:0 14px 30px rgba(0,0,0,.04);
+      height:100%;
+      transition:.2s;
+    }
+    .blog-card:hover{ transform:translateY(-3px); box-shadow:0 18px 40px rgba(0,0,0,.06); }
+    .blog-thumb{
+      width:100%;
+      height:160px;
+      border-radius:14px;
+      object-fit:cover;
+      border:1px solid rgba(0,0,0,.06);
+      background:#eee;
+      margin-bottom:12px;
+      display:block;
+    }
+    .blog-meta{
+      font-size:.85rem;
+      color:#7a7a7a;
+      margin-bottom:6px;
+    }
+    .blog-card-title{
+      font-weight:900;
+      margin-bottom:6px;
+      font-size:1.05rem;
+      color:#131313;
+    }
+    .blog-card-excerpt{
+      color:#6a6a6a;
+      font-size:.95rem;
+      margin-bottom:12px;
+      line-height:1.45;
+    }
+    .blog-read{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-weight:800;
+      color:#131313;
+      border:1px solid rgba(0,0,0,.08);
+      padding:8px 12px;
+      border-radius:999px;
+      transition:.2s;
+      font-size:.9rem;
+      background:#fff;
+    }
+    .blog-read:hover{ color:var(--primary-red); border-color:rgba(251,74,54,.35); background:rgba(251,74,54,.06); }
+
+    /* ===== PAGINATION PREV / NEXT ===== */
+    .blog-pager{
+      display:flex;
+      justify-content:center;
+      gap:12px;
+      padding:10px 0 30px;
+    }
+    .pager-btn{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      border-radius:999px;
+      padding:10px 16px;
+      border:1px solid rgba(0,0,0,.10);
+      background:#fff;
+      font-weight:900;
+      color:#131313;
+      box-shadow:0 12px 24px rgba(0,0,0,.06);
+      transition:.2s;
+    }
+    .pager-btn:hover{ transform:translateY(-1px); color:var(--primary-red); border-color:rgba(251,74,54,.35); }
+    .pager-btn[aria-disabled="true"]{
+      opacity:.45;
+      pointer-events:none;
+      box-shadow:none;
+    }
+
+    /* ===== Floating WhatsApp ===== */
+    .wa-float{
+      position:fixed; right:18px; bottom:18px; z-index:9999;
+      display:flex; align-items:center; gap:10px;
+    }
+    .wa-float .wa-tooltip{
+      background:#fff;
+      border:1px solid rgba(0,0,0,0.06);
+      box-shadow:0 10px 25px rgba(0,0,0,0.08);
+      padding:10px 12px; border-radius:14px;
+      font-size:.85rem; color:#333;
+      display:none; white-space:nowrap;
+    }
+    .wa-float:hover .wa-tooltip{ display:inline-block; }
+    .wa-float .wa-btn{
+      width:54px; height:54px; border-radius:999px;
+      display:inline-flex; align-items:center; justify-content:center;
+      background:#25D366; color:#fff; border:none;
+      box-shadow:0 15px 25px rgba(0,0,0,0.15);
+      transition:transform .2s ease;
+    }
+    .wa-float .wa-btn:hover{ transform:translateY(-2px); }
+
+    @media (max-width:991px){
+      .blog-title{ font-size:2.25rem; }
+      .navbar-collapse{
+        background:#fff; padding:20px; border-radius:10px; margin-top:10px;
+        box-shadow:0 5px 20px rgba(0,0,0,0.1);
+      }
+      .blog-thumb{ height:150px; }
+    }
+    @media (max-width:575px){
+      .blog-hero{ padding:58px 0 24px; }
+      .blog-title{ font-size:2.05rem; }
+      .blog-thumb{ height:150px; }
+      .blog-pager{ padding-bottom:24px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR (SAMA) -->
+  <nav class="navbar navbar-expand-lg" id="home">
+    <div class="container">
+      <a class="navbar-brand" href="index.html#home" aria-label="BUNDAKU Beranda">
+        <i class="fa-solid fa-cookie-bite text-danger"></i> BUNDAKU
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigasi">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="tentang-kami.html">Tentang Kami</a></li>
+          <li class="nav-item"><a class="nav-link" href="produk.html">Produk</a></li>
+          <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+
+      <div class="navbar-icons d-none d-lg-block">
+        <i class="fa-solid fa-magnifying-glass" role="button" tabindex="0" aria-label="Cari artikel"
+          data-bs-toggle="modal" data-bs-target="#searchModal"></i>
+
+        <i class="fa-solid fa-cart-shopping" role="button" tabindex="0" aria-label="Keranjang"
+          data-bs-toggle="offcanvas" data-bs-target="#cartCanvas">
+          <span class="cart-badge" id="cartBadge">0</span>
+        </i>
+
+        <i class="fa-regular fa-user" role="button" tabindex="0" aria-label="Akun"
+          data-bs-toggle="modal" data-bs-target="#accountModal"></i>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO BLOG -->
+  <section class="blog-hero">
+    <div class="container">
+      <div class="tagline">Blog Bundaku</div>
+      <h1 class="blog-title">Artikel singkat,<br>tips yang kepake.</h1>
+
+    </div>
+  </section>
+
+  <!-- 9 BOX BLOG -->
+  <section class="blog-grid">
+    <div class="container">
+      <div class="row g-3">
+
+        <!-- 1 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="blog-card">
+            <img class="blog-thumb" src="https://images.unsplash.com/photo-1604908554022-12f95a6f12e8?auto=format&fit=crop&w=1200&q=80" alt="Tips memilih nastar" loading="lazy" decoding="async" />
+            <div class="blog-meta"><i class="fa-regular fa-calendar me-2"></i>Jan 2026 • Tips</div>
+            <div class="blog-card-title">Cara memilih Nastar yang lembut & wangi</div>
+            <div class="blog-card-excerpt">Perhatikan butter, tekstur, dan isian nanasnya. Ini checklist singkat biar nggak salah pilih.</div>
+            <a class="blog-read" href="cara-memilih-nastar-yang-lembut.html"><span>Baca Selengkapnya</span><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="blog-card">
+            <img class="blog-thumb" src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=1200&q=80" alt="Kastengel keju" loading="lazy" decoding="async" />
+            <div class="blog-meta"><i class="fa-regular fa-calendar me-2"></i>Jan 2026 • Guide</div>
+            <div class="blog-card-title">Kastengel enak: gurih, keju kerasa, tidak keras</div>
+            <div class="blog-card-excerpt">Kastengel yang pas itu renyah tapi bukan keras. Ini ciri-ciri yang bisa kamu cek.</div>
+            <a class="blog-read" href="kastengel-enak-gurih-tidak-keras.html"><span>Baca Selengkapnya</span><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="blog-card">
+            <img class="blog-thumb" src="https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&w=1200&q=80" alt="Cara simpan kue" loading="lazy" decoding="async" />
+            <div class="blog-meta"><i class="fa-regular fa-calendar me-2"></i>Jan 2026 • Storage</div>
+            <div class="blog-card-title">Cara menyimpan kue kering biar tetap renyah</div>
+            <div class="blog-card-excerpt">Salah simpan bikin cepat melempem. Ikuti cara sederhana ini biar awet dan aman.</div>
+            <a class="blog-read" href="cara-menyimpan-kue-kering-biar-tetep-renyah.html"><span>Baca Selengkapnya</span><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="blog-card">
+            <img class="blog-thumb" src="https://images.unsplash.com/photo-1542826438-bd32f43d626f?auto=format&fit=crop&w=1200&q=80" alt="Ide hampers" loading="lazy" decoding="async" />
+            <div class="blog-meta"><i class="fa-regular fa-calendar me-2"></i>Jan 2026 • Hampers</div>
+            <div class="blog-card-title">Ide hampers simpel tapi kelihatan premium</div>
+            <div class="blog-card-excerpt">Mulai dari kombinasi rasa sampai kartu ucapan. Ini cara bikin hampers terlihat mahal.</div>
+            <a class="blog-read" href="ide-hempers-simple-tapi-terlihat-premium.html"><span>Baca Selengkapnya</span><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="blog-card">
+            <img class="blog-thumb" src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec?auto=format&fit=crop&w=1200&q=80" alt="Lapis legit" loading="lazy" decoding="async" />
+            <div class="blog-meta"><i class="fa-regular fa-calendar me-2"></i>Jan 2026 • Premium</div>
+            <div class="blog-card-title">Kenapa Lapis Legit disebut kue premium?</div>
+            <div class="blog-card-excerpt">Prosesnya panjang, bahan harus bagus, dan butuh teknik. Ini alasan kenapa rasanya istimewa.</div>
+            <a class="blog-read" href="kenapa-lapis-legit-disebut-kue-premium.html"><span>Baca Selengkapnya</span><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="blog-card">
+            <img class="blog-thumb" src="https://images.unsplash.com/photo-1606509036992-4399d5c5afe4?auto=format&fit=crop&w=1200&q=80" alt="PO Hari Raya" loading="lazy" decoding="async" />
+            <div class="blog-meta"><i class="fa-regular fa-calendar me-2"></i>Jan 2026 • PO</div>
+            <div class="blog-card-title">Tips pesan PO Hari Raya biar aman & kebagian</div>
+            <div class="blog-card-excerpt">Biar nggak kehabisan, ini waktu terbaik order, cara pilih paket, dan cek pengiriman.</div>
+            <a class="blog-read" href="tips-pesan-po-hari-raya-agar-aman.html"><span>Baca Selengkapnya</span><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="blog-card">
+            <img class="blog-thumb" src="https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?auto=format&fit=crop&w=1200&q=80" alt="Kartu ucapan hampers" loading="lazy" decoding="async" />
+            <div class="blog-meta"><i class="fa-regular fa-calendar me-2"></i>Jan 2026 • Gift</div>
+            <div class="blog-card-title">Contoh kartu ucapan untuk hampers (singkat & sopan)</div>
+            <div class="blog-card-excerpt">Bingung nulis apa? Ini beberapa contoh kalimat yang aman untuk keluarga & relasi.</div>
+            <a class="blog-read" href="contoh-kartu-ucapan-untuk-hempers.html"><span>Baca Selengkapnya</span><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="blog-card">
+            <img class="blog-thumb" src="https://images.unsplash.com/photo-1601972599720-bd8c65f9a5e5?auto=format&fit=crop&w=1200&q=80" alt="Packing aman" loading="lazy" decoding="async" />
+            <div class="blog-meta"><i class="fa-regular fa-calendar me-2"></i>Jan 2026 • Packing</div>
+            <div class="blog-card-title">Packing aman: biar toples tidak remuk saat kirim</div>
+            <div class="blog-card-excerpt">Bubble, sekat, dan sealing yang bener itu penting. Ini gambaran proses packing yang aman.</div>
+            <a class="blog-read" href="packing-aman-biar-tidak-remuk.html"><span>Baca Selengkapnya</span><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- 9 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="blog-card">
+            <img class="blog-thumb" src="https://images.unsplash.com/photo-1542826438-bd32f43d626f?auto=format&fit=crop&w=1200&q=80" alt="Rekomendasi paket" loading="lazy" decoding="async" />
+            <div class="blog-meta"><i class="fa-regular fa-calendar me-2"></i>Jan 2026 • Rekomendasi</div>
+            <div class="blog-card-title">Rekomendasi paket untuk keluarga vs untuk kantor</div>
+            <div class="blog-card-excerpt">Biar pas budget dan kebutuhan, ini saran kombinasi produk untuk dua tipe penerima.</div>
+            <a class="blog-read" href="rekomendasi-paket-untuk-keluarga.html"><span>Baca Selengkapnya</span><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PREV / NEXT -->
+  <div class="blog-pager">
+    <a class="pager-btn" href="#" aria-disabled="true"><i class="fa-solid fa-chevron-left"></i> Prev</a>
+    <a class="pager-btn" href="#"><span>Next</span> <i class="fa-solid fa-chevron-right"></i></a>
+  </div>
+
+  <!-- FOOTER (SAMA) -->
+  <footer class="py-5 bg-light mt-4" id="contact">
+    <div class="container">
+      <div class="row g-4 align-items-start">
+        <div class="col-md-4">
+          <h5 class="mb-3"><i class="fa-solid fa-cookie-bite text-danger"></i> BUNDAKU</h5>
+          <p class="text-muted mb-3">
+            Toko kue Hari Raya yang fokus pada rasa, kualitas, dan kemasan hampers yang elegan.
+          </p>
+          <div class="d-flex gap-3">
+            <a href="#" class="text-dark" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="text-dark" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="text-dark" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <h6 class="mb-3">Kontak</h6>
+          <p class="text-muted mb-1"><i class="fa-solid fa-location-dot me-2"></i> Jalan Kue No. 1, Jakarta</p>
+          <p class="text-muted mb-1"><i class="fa-solid fa-clock me-2"></i> 08.00 - 21.00 (Setiap Hari)</p>
+          <p class="text-muted mb-3"><i class="fa-solid fa-phone me-2"></i> +62 000-0000-0000</p>
+          <button class="btn btn-dark btn-sm" data-bs-toggle="modal" data-bs-target="#contactModal">Kirim Pesan</button>
+        </div>
+
+        <div class="col-md-4">
+          <h6 class="mb-3">Berlangganan Promo</h6>
+          <p class="text-muted">Dapatkan info promo hampers dan jadwal PO kue Hari Raya.</p>
+          <form id="subscribeForm" class="d-flex gap-2">
+            <input type="email" class="form-control" placeholder="Email kamu" required />
+            <button class="btn btn-danger" type="submit">Daftar</button>
+          </form>
+          <small class="text-muted d-block mt-2" id="subscribeMsg"></small>
+        </div>
+      </div>
+
+      <hr class="my-4" />
+      <div class="text-center">
+        <p class="mb-0 text-muted">&copy; 2026 BUNDAKU. Semua hak dilindungi.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WA FLOAT (SAMA) -->
+  <div class="wa-float" aria-label="WhatsApp BUNDAKU">
+    <span class="wa-tooltip">Chat WhatsApp untuk order</span>
+    <a class="wa-btn"
+      href="https://wa.me/6281200000000?text=Halo%20BUNDAKU,%20saya%20mau%20tanya%20produk%20dan%20PO%20Hari%20Raya.%20Bisa%20dibantu%3F"
+      target="_blank" rel="noopener noreferrer" aria-label="Chat WhatsApp">
+      <i class="fa-brands fa-whatsapp" style="font-size: 1.5rem;"></i>
+    </a>
+  </div>
+
+  <!-- MODAL + OFFCANVAS (SAMA) -->
+  <!-- Search Modal -->
+  <div class="modal fade" id="searchModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-4">
+        <div class="modal-header">
+          <h5 class="modal-title">Cari (Demo)</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+        </div>
+        <div class="modal-body">
+          <input type="text" class="form-control" id="searchInput" placeholder="Ketik kata kunci..." />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Account Modal -->
+  <div class="modal fade" id="accountModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-4">
+        <div class="modal-header">
+          <h5 class="modal-title">Akun</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+        </div>
+        <div class="modal-body">
+          <form id="loginForm">
+            <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" required placeholder="nama@email.com" />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Password</label>
+              <input type="password" class="form-control" required placeholder="••••••••" />
+            </div>
+            <button class="btn btn-danger w-100" type="submit">Masuk</button>
+            <small class="text-muted d-block mt-2">*Demo: tombol aktif, menampilkan notifikasi.</small>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart Offcanvas -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="cartCanvas" aria-labelledby="cartCanvasLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="cartCanvasLabel">Keranjang</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Tutup"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div id="cartItems" class="mb-3"></div>
+      <div class="d-flex justify-content-between align-items-center border-top pt-3">
+        <strong>Total</strong>
+        <strong id="cartTotal">Rp 0</strong>
+      </div>
+      <button class="btn btn-danger w-100 mt-3" id="btnCheckout" type="button">Checkout</button>
+      <button class="btn btn-outline-dark w-100 mt-2" id="btnClearCart" type="button">Kosongkan Keranjang</button>
+      <small class="text-muted d-block mt-2">*Checkout demo: menampilkan ringkasan order.</small>
+    </div>
+  </div>
+
+  <!-- Contact Modal -->
+  <div class="modal fade" id="contactModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-4">
+        <div class="modal-header">
+          <h5 class="modal-title">Kirim Pesan</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+        </div>
+        <div class="modal-body">
+          <form id="contactForm">
+            <div class="mb-3">
+              <label class="form-label">Nama</label>
+              <input type="text" class="form-control" required placeholder="Nama kamu" />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">No. WhatsApp</label>
+              <input type="tel" class="form-control" required placeholder="08xxxxxxxxxx" />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Pesan</label>
+              <textarea class="form-control" rows="3" required placeholder="Saya mau tanya..."></textarea>
+            </div>
+            <button class="btn btn-danger w-100" type="submit">Kirim</button>
+            <small class="text-muted d-block mt-2">*Demo: tombol aktif, menampilkan notifikasi.</small>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Util: format Rupiah
+    function formatRupiah(num){
+      const n = Number(num) || 0;
+      return 'Rp ' + n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+    }
+
+    // Cart state (biar navbar sama)
+    const CART_KEY = 'bundaku_cart_v1';
+    let cart = [];
+
+    function loadCart(){
+      try{
+        const raw = localStorage.getItem(CART_KEY);
+        cart = raw ? JSON.parse(raw) : [];
+      }catch(e){ cart = []; }
+    }
+    function saveCart(){ localStorage.setItem(CART_KEY, JSON.stringify(cart)); }
+    function cartCount(){ return cart.reduce((s,i)=>s+i.qty,0); }
+    function cartTotal(){ return cart.reduce((s,i)=>s+(i.price*i.qty),0); }
+
+    function updateBadge(){
+      const badge = document.getElementById('cartBadge');
+      if(!badge) return;
+      const count = cartCount();
+      badge.textContent = count;
+      badge.style.display = count > 0 ? 'inline-block' : 'none';
+    }
+
+    function renderCart(){
+      const wrap = document.getElementById('cartItems');
+      const totalEl = document.getElementById('cartTotal');
+      if(!wrap || !totalEl) return;
+
+      if(!cart.length){
+        wrap.innerHTML = '<div class="text-muted">Keranjang masih kosong.</div>';
+        totalEl.textContent = formatRupiah(0);
+        return;
+      }
+
+      wrap.innerHTML = cart.map((item, idx) => `
+        <div class="d-flex align-items-center justify-content-between border rounded-4 p-3 mb-2">
+          <div>
+            <div class="fw-semibold">${item.name}</div>
+            <div class="text-muted" style="font-size:0.9rem;">${formatRupiah(item.price)} x ${item.qty}</div>
+          </div>
+          <div class="d-flex align-items-center gap-2">
+            <button class="btn btn-sm btn-outline-dark" data-action="dec" data-idx="${idx}">-</button>
+            <button class="btn btn-sm btn-outline-dark" data-action="inc" data-idx="${idx}">+</button>
+            <button class="btn btn-sm btn-danger" data-action="del" data-idx="${idx}">
+              <i class="fa-solid fa-trash"></i>
+            </button>
+          </div>
+        </div>
+      `).join('');
+
+      totalEl.textContent = formatRupiah(cartTotal());
+    }
+
+    function bindCartActions(){
+      const cartItems = document.getElementById('cartItems');
+      const btnClear = document.getElementById('btnClearCart');
+      const btnCheckout = document.getElementById('btnCheckout');
+
+      cartItems && cartItems.addEventListener('click', (e)=>{
+        const btn = e.target.closest('button[data-action]');
+        if(!btn) return;
+        const action = btn.getAttribute('data-action');
+        const idx = Number(btn.getAttribute('data-idx'));
+        if(Number.isNaN(idx) || !cart[idx]) return;
+
+        if(action==='inc') cart[idx].qty += 1;
+        if(action==='dec') cart[idx].qty = Math.max(1, cart[idx].qty - 1);
+        if(action==='del') cart.splice(idx, 1);
+
+        saveCart(); updateBadge(); renderCart();
+      });
+
+      btnClear && btnClear.addEventListener('click', ()=>{
+        cart = [];
+        saveCart();
+        updateBadge();
+        renderCart();
+        alert('Keranjang dikosongkan.');
+      });
+
+      btnCheckout && btnCheckout.addEventListener('click', ()=>{
+        if(!cart.length){ alert('Keranjang masih kosong.'); return; }
+        const ringkasan = cart.map(x => `- ${x.name} x ${x.qty} (${formatRupiah(x.price * x.qty)})`).join('\n');
+        alert(`Ringkasan Pesanan:\n${ringkasan}\n\nTotal: ${formatRupiah(cartTotal())}\n\nLanjutkan via WhatsApp untuk konfirmasi pembayaran/pengiriman.`);
+      });
+    }
+
+    function bindForms(){
+      const loginForm = document.getElementById('loginForm');
+      const contactForm = document.getElementById('contactForm');
+      const subscribeForm = document.getElementById('subscribeForm');
+
+      loginForm && loginForm.addEventListener('submit', (e)=>{
+        e.preventDefault();
+        alert('Berhasil (demo): kamu sudah masuk.');
+        const modal = bootstrap.Modal.getInstance(document.getElementById('accountModal'));
+        modal?.hide();
+      });
+
+      contactForm && contactForm.addEventListener('submit', (e)=>{
+        e.preventDefault();
+        alert('Pesan terkirim (demo). Untuk respon cepat, gunakan WhatsApp.');
+        const modal = bootstrap.Modal.getInstance(document.getElementById('contactModal'));
+        modal?.hide();
+      });
+
+      subscribeForm && subscribeForm.addEventListener('submit', (e)=>{
+        e.preventDefault();
+        const msg = document.getElementById('subscribeMsg');
+        if(msg) msg.textContent = 'Terima kasih! Kamu sudah terdaftar untuk info promo.';
+        e.target.reset();
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', ()=>{
+      loadCart();
+      updateBadge();
+      renderCart();
+      bindCartActions();
+      bindForms();
+    });
+  </script>
+
+</body>
+</html>
