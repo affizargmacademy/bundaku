@@ -63,7 +63,7 @@
     a{ text-decoration:none; }
     h1,h2,h3,h4,h5,h6{ font-weight:600; }
 
-    /* NAVBAR (SAMA) */
+    /* NAVBAR (JANGAN DIUBAH) */
     .navbar{ padding-top:20px; background-color:transparent; }
     .navbar-brand{
       font-weight:700; font-size:1.5rem; color:var(--text-black)!important;
@@ -121,7 +121,7 @@
 
     /* HERO PRODUK */
     .produk-hero{
-      padding:70px 0 28px;
+      padding:70px 0 18px;
     }
     .produk-hero-title{
       font-size:3.0rem;
@@ -136,8 +136,50 @@
       font-size:1.02rem;
     }
 
+    /* CTA (BARU) */
+    .cta-banner{
+      margin: 10px 0 6px;
+    }
+    .cta-card{
+      background:#fff;
+      border:1px solid rgba(0,0,0,0.06);
+      border-radius:18px;
+      padding:16px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      box-shadow:0 12px 28px rgba(0,0,0,0.04);
+    }
+    .cta-title{
+      margin:0;
+      font-weight:900;
+      font-size:1.02rem;
+    }
+    .cta-sub{
+      margin:4px 0 0;
+      color:#6a6a6a;
+      font-size:.92rem;
+    }
+    .btn-cta-outline{
+      border-radius:999px;
+      font-weight:900;
+      padding:10px 16px;
+      border:1px solid rgba(0,0,0,0.14);
+      background:#fff;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      color:#131313;
+      transition:.2s;
+    }
+    .btn-cta-outline:hover{
+      border-color:#FB4A36;
+      color:#FB4A36;
+    }
+
     /* WRAPPER 2 KOLOM */
-    .produk-wrapper{ padding:30px 0 20px; }
+    .produk-wrapper{ padding:18px 0 20px; }
     .produk-grid{
       display:grid;
       grid-template-columns:330px 1fr;
@@ -175,16 +217,20 @@
       transition:.2s;
       text-transform:uppercase;
       user-select:none;
+      border:1px solid rgba(0,0,0,0.06);
+      background:#fff;
     }
     .menu-nav .menu-list li i{ color:#9a9a9a; transition:.2s; }
     .menu-nav .menu-list li:hover{
       background:rgba(251,74,54,.08);
       color:#FB4A36;
+      border-color:rgba(251,74,54,.18);
     }
     .menu-nav .menu-list li:hover i{ color:#FB4A36; }
     .menu-nav .menu-list li.active{
       background:#FB4A36;
       color:#fff;
+      border-color:#FB4A36;
     }
     .menu-nav .menu-list li.active i{ color:#fff; }
 
@@ -225,16 +271,42 @@
     .food-title{ font-size:1rem; font-weight:800; margin-bottom:6px; }
     .food-price{ font-weight:900; font-size:1.1rem; color:#131313; margin-bottom:12px; display:block; }
 
-    .btn-add-cart{
+    /* tombol ATAS (detail) */
+    .btn-detail{
+      width:100%;
+      border-radius:999px;
+      font-weight:900;
       font-size:.85rem;
-      color:#666;
-      text-decoration:none;
-      border:1px solid rgba(0,0,0,0.08);
       padding:9px 14px;
+      border:1px solid rgba(0,0,0,0.12);
+      background:#fff;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      transition:.2s;
+      margin-bottom:12px;
+      color:#131313;
+    }
+    .btn-detail:hover{
+      border-color:#FB4A36;
+      color:#FB4A36;
+    }
+
+    /* tombol BAWAH (tambah keranjang) */
+    .btn-add-cart{
+      width:100%;
+      font-size:.85rem;
+      font-weight:900;
+      color:#131313;
+      text-decoration:none;
+      border:1px solid rgba(0,0,0,0.12);
+      padding:10px 14px;
       border-radius:999px;
       transition:.25s;
       display:inline-flex;
       align-items:center;
+      justify-content:center;
       gap:8px;
       background:#fff;
     }
@@ -244,7 +316,7 @@
       border-color:#131313;
     }
 
-    /* Floating WA */
+    /* Floating WA (JANGAN DIUBAH) */
     .wa-float{
       position:fixed;
       right:18px;
@@ -284,29 +356,24 @@
     /* RESPONSIVE */
     @media (max-width: 991px){
       .produk-hero-title{ font-size:2.25rem; }
-      .produk-grid{ grid-template-columns:1fr; }
+      .produk-grid{ grid-template-columns:1fr; gap:16px; }
 
+      /* PENTING: mobile tetap panel vertikal (bukan chip horizontal) */
       .menu-nav .menu-list{
         position:static;
-        flex-direction:row;
-        flex-wrap:wrap;
+        top:auto;
+        flex-direction:column;
         gap:10px;
-        padding:0;
-        background:transparent;
-        border:none;
+        padding:18px;
+        background:#fff;
+        border:1px solid rgba(0,0,0,0.06);
+        border-radius:18px;
       }
       .menu-nav .menu-list li{
-        width:auto;
-        border:1px solid rgba(0,0,0,0.06);
-        background:#fff;
-        border-radius:999px;
-        padding:8px 12px;
-        justify-content:flex-start;
-        gap:8px;
-        letter-spacing:.8px;
-      }
-      .menu-nav .menu-list li.active{
-        border-color:#FB4A36;
+        width:100%;
+        border-radius:14px;
+        padding:12px 14px;
+        justify-content:space-between;
       }
 
       .navbar-collapse{
@@ -316,13 +383,25 @@
         margin-top:10px;
         box-shadow:0 5px 20px rgba(0,0,0,0.1);
       }
+
+      .cta-card{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+      .cta-actions{
+        width:100%;
+        display:flex;
+        gap:10px;
+        flex-wrap:wrap;
+      }
+      .cta-actions a, .cta-actions button{ width:100%; }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- NAVBAR (SAMA) -->
+  <!-- NAVBAR (JANGAN DIUBAH) -->
   <nav class="navbar navbar-expand-lg" id="home">
     <div class="container">
       <a class="navbar-brand" href="index.html#home" aria-label="BUNDAKU Beranda">
@@ -355,23 +434,17 @@
     </div>
   </nav>
 
-  <!-- HERO PRODUK -->
+  <!-- HERO PRODUK (DIBENERIN TAG NYA) -->
   <section class="produk-hero" id="produkHero">
     <div class="container">
-  
-      <div class="d-flex flex-column flex-lg-row justify-content-between align-items-start gap-3">
-        <!-- KIRI: Judul + Deskripsi -->
-        <div>
-          <div class="tagline">Produk Bundaku</div>
-          <h1 class="produk-hero-title">Pilih kue favoritmu,<br>siap jadi hampers cantik.</h1>
-
-        </div>
-  
-
-  
+      <div class="d-flex flex-column gap-2">
+        <div class="tagline">Produk Bundaku</div>
+        <h1 class="produk-hero-title">Pilih kue favoritmu,<br>siap jadi hampers cantik.</h1>
+      </div>
     </div>
   </section>
-  
+
+
 
   <!-- PRODUK (NAV KIRI + GRID KANAN) -->
   <section class="produk-wrapper" id="produk">
@@ -397,30 +470,52 @@
         <!-- KANAN: GRID -->
         <main class="produk-content">
 
-
           <section class="pb-5" id="products">
             <div class="row g-3" id="productGrid">
 
-              <!-- ==== ITEM PRODUK (boleh tambah sendiri) ==== -->
+              <!-- ==== ITEM PRODUK (ditambah 2 tombol: Detail + Tambah Keranjang) ==== -->
 
-              <div class="col-6 col-md-4 col-lg-3 product-item" data-category="KUE_KERING BESTSELLER">
+              <div class="col-6 col-md-4 col-lg-3 product-item"
+                data-category="KUE_KERING BESTSELLER"
+                data-name="Nastar Premium"
+                data-price="125000"
+                data-img="https://images.unsplash.com/photo-1606509036992-4399d5c5afe4?auto=format&fit=crop&w=1200&q=80"
+                data-desc="Nastar premium dengan isian nanas legit, kulit lembut, dan aroma butter yang wangi. Cocok untuk suguhan keluarga dan hampers.">
                 <div class="food-card">
                   <img class="food-img"
                     src="https://images.unsplash.com/photo-1606509036992-4399d5c5afe4?auto=format&fit=crop&w=900&q=80"
                     alt="Nastar Premium" loading="lazy" decoding="async" />
+
+                  <!-- tombol atas -->
+                  <button type="button" class="btn-detail btn-open-detail" data-bs-toggle="modal" data-bs-target="#productDetailModal">
+                    <i class="fa-regular fa-eye"></i> Detail Produk
+                  </button>
+
                   <h5 class="food-title">Nastar Premium</h5>
                   <span class="food-price">Rp 125.000</span>
+
+                  <!-- tombol bawah -->
                   <a href="#" class="btn-add-cart" data-name="Nastar Premium" data-price="125000">
                     <i class="fa-solid fa-bag-shopping"></i> Tambah Keranjang
                   </a>
                 </div>
               </div>
 
-              <div class="col-6 col-md-4 col-lg-3 product-item" data-category="KUE_KERING PREMIUM">
+              <div class="col-6 col-md-4 col-lg-3 product-item"
+                data-category="KUE_KERING PREMIUM"
+                data-name="Kastengel Keju"
+                data-price="135000"
+                data-img="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=1200&q=80"
+                data-desc="Kastengel gurih dengan taburan keju melimpah. Renyah, wangi, dan rasa kejunya nendang.">
                 <div class="food-card">
                   <img class="food-img"
                     src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=900&q=80"
                     alt="Kastengel Keju" loading="lazy" decoding="async" />
+
+                  <button type="button" class="btn-detail btn-open-detail" data-bs-toggle="modal" data-bs-target="#productDetailModal">
+                    <i class="fa-regular fa-eye"></i> Detail Produk
+                  </button>
+
                   <h5 class="food-title">Kastengel Keju</h5>
                   <span class="food-price">Rp 135.000</span>
                   <a href="#" class="btn-add-cart" data-name="Kastengel Keju" data-price="135000">
@@ -429,11 +524,21 @@
                 </div>
               </div>
 
-              <div class="col-6 col-md-4 col-lg-3 product-item" data-category="KUE_KERING BESTSELLER">
+              <div class="col-6 col-md-4 col-lg-3 product-item"
+                data-category="KUE_KERING BESTSELLER"
+                data-name="Putri Salju Lumer"
+                data-price="120000"
+                data-img="https://images.unsplash.com/photo-1604908554022-12f95a6f12e8?auto=format&fit=crop&w=1200&q=80"
+                data-desc="Putri salju dengan taburan gula halus. Tekstur lembut dan lumer di mulut, manisnya pas.">
                 <div class="food-card">
                   <img class="food-img"
                     src="https://images.unsplash.com/photo-1604908554022-12f95a6f12e8?auto=format&fit=crop&w=900&q=80"
                     alt="Putri Salju Lumer" loading="lazy" decoding="async" />
+
+                  <button type="button" class="btn-detail btn-open-detail" data-bs-toggle="modal" data-bs-target="#productDetailModal">
+                    <i class="fa-regular fa-eye"></i> Detail Produk
+                  </button>
+
                   <h5 class="food-title">Putri Salju Lumer</h5>
                   <span class="food-price">Rp 120.000</span>
                   <a href="#" class="btn-add-cart" data-name="Putri Salju Lumer" data-price="120000">
@@ -442,11 +547,21 @@
                 </div>
               </div>
 
-              <div class="col-6 col-md-4 col-lg-3 product-item" data-category="LAPIS PREMIUM">
+              <div class="col-6 col-md-4 col-lg-3 product-item"
+                data-category="LAPIS PREMIUM"
+                data-name="Lapis Legit"
+                data-price="220000"
+                data-img="https://images.unsplash.com/photo-1608198093002-ad4e005484ec?auto=format&fit=crop&w=1200&q=80"
+                data-desc="Lapis legit berlapis rapi dengan aroma butter kuat. Tekstur moist dan rasa premium.">
                 <div class="food-card">
                   <img class="food-img"
                     src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec?auto=format&fit=crop&w=900&q=80"
                     alt="Lapis Legit" loading="lazy" decoding="async" />
+
+                  <button type="button" class="btn-detail btn-open-detail" data-bs-toggle="modal" data-bs-target="#productDetailModal">
+                    <i class="fa-regular fa-eye"></i> Detail Produk
+                  </button>
+
                   <h5 class="food-title">Lapis Legit</h5>
                   <span class="food-price">Rp 220.000</span>
                   <a href="#" class="btn-add-cart" data-name="Lapis Legit" data-price="220000">
@@ -455,11 +570,21 @@
                 </div>
               </div>
 
-              <div class="col-6 col-md-4 col-lg-3 product-item" data-category="HAMPERS PROMO">
+              <div class="col-6 col-md-4 col-lg-3 product-item"
+                data-category="HAMPERS PROMO"
+                data-name="Hampers Mini"
+                data-price="199000"
+                data-img="https://images.unsplash.com/photo-1542826438-bd32f43d626f?auto=format&fit=crop&w=1200&q=80"
+                data-desc="Hampers mini untuk hadiah. Kemasan cantik, cocok untuk relasi dan keluarga.">
                 <div class="food-card">
                   <img class="food-img"
                     src="https://images.unsplash.com/photo-1542826438-bd32f43d626f?auto=format&fit=crop&w=900&q=80"
                     alt="Hampers Mini" loading="lazy" decoding="async" />
+
+                  <button type="button" class="btn-detail btn-open-detail" data-bs-toggle="modal" data-bs-target="#productDetailModal">
+                    <i class="fa-regular fa-eye"></i> Detail Produk
+                  </button>
+
                   <h5 class="food-title">Hampers Mini</h5>
                   <span class="food-price">Rp 199.000</span>
                   <a href="#" class="btn-add-cart" data-name="Hampers Mini" data-price="199000">
@@ -468,11 +593,21 @@
                 </div>
               </div>
 
-              <div class="col-6 col-md-4 col-lg-3 product-item" data-category="HAMPERS PREMIUM">
+              <div class="col-6 col-md-4 col-lg-3 product-item"
+                data-category="HAMPERS PREMIUM"
+                data-name="Hampers Keluarga"
+                data-price="349000"
+                data-img="https://images.unsplash.com/photo-1523293836415-57c8a3fc2f0b?auto=format&fit=crop&w=1200&q=80"
+                data-desc="Hampers keluarga dengan kemasan elegan dan isi variatif. Bisa custom kartu ucapan.">
                 <div class="food-card">
                   <img class="food-img"
                     src="https://images.unsplash.com/photo-1523293836415-57c8a3fc2f0b?auto=format&fit=crop&w=900&q=80"
                     alt="Hampers Keluarga" loading="lazy" decoding="async" />
+
+                  <button type="button" class="btn-detail btn-open-detail" data-bs-toggle="modal" data-bs-target="#productDetailModal">
+                    <i class="fa-regular fa-eye"></i> Detail Produk
+                  </button>
+
                   <h5 class="food-title">Hampers Keluarga</h5>
                   <span class="food-price">Rp 349.000</span>
                   <a href="#" class="btn-add-cart" data-name="Hampers Keluarga" data-price="349000">
@@ -481,11 +616,21 @@
                 </div>
               </div>
 
-              <div class="col-6 col-md-4 col-lg-3 product-item" data-category="KUE_BASAH PROMO">
+              <div class="col-6 col-md-4 col-lg-3 product-item"
+                data-category="KUE_BASAH PROMO"
+                data-name="Brownies Cokelat"
+                data-price="95000"
+                data-img="https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&w=1200&q=80"
+                data-desc="Brownies cokelat fudgy, legit, dan wangi. Cocok untuk teman kopi/teh.">
                 <div class="food-card">
                   <img class="food-img"
                     src="https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&w=900&q=80"
                     alt="Brownies Cokelat" loading="lazy" decoding="async" />
+
+                  <button type="button" class="btn-detail btn-open-detail" data-bs-toggle="modal" data-bs-target="#productDetailModal">
+                    <i class="fa-regular fa-eye"></i> Detail Produk
+                  </button>
+
                   <h5 class="food-title">Brownies Cokelat</h5>
                   <span class="food-price">Rp 95.000</span>
                   <a href="#" class="btn-add-cart" data-name="Brownies Cokelat" data-price="95000">
@@ -494,11 +639,21 @@
                 </div>
               </div>
 
-              <div class="col-6 col-md-4 col-lg-3 product-item" data-category="KUE_BASAH">
+              <div class="col-6 col-md-4 col-lg-3 product-item"
+                data-category="KUE_BASAH"
+                data-name="Bolu Jadul"
+                data-price="85000"
+                data-img="https://images.unsplash.com/photo-1601972599720-bd8c65f9a5e5?auto=format&fit=crop&w=1200&q=80"
+                data-desc="Bolu jadul lembut dengan rasa klasik. Manisnya pas, cocok untuk suguhan keluarga.">
                 <div class="food-card">
                   <img class="food-img"
                     src="https://images.unsplash.com/photo-1601972599720-bd8c65f9a5e5?auto=format&fit=crop&w=900&q=80"
                     alt="Bolu Jadul" loading="lazy" decoding="async" />
+
+                  <button type="button" class="btn-detail btn-open-detail" data-bs-toggle="modal" data-bs-target="#productDetailModal">
+                    <i class="fa-regular fa-eye"></i> Detail Produk
+                  </button>
+
                   <h5 class="food-title">Bolu Jadul</h5>
                   <span class="food-price">Rp 85.000</span>
                   <a href="#" class="btn-add-cart" data-name="Bolu Jadul" data-price="85000">
@@ -516,7 +671,30 @@
     </div>
   </section>
 
-  <!-- FOOTER (SAMA) -->
+    <!-- CTA (BARU) -->
+    <section class="cta-banner">
+      <div class="container">
+        <div class="cta-card">
+          <div>
+            <p class="cta-title">Butuh cepat? Pesan via WhatsApp atau cek keranjang.</p>
+            <p class="cta-sub">Checkout di sini masih demo — untuk konfirmasi pengiriman/pembayaran bisa lanjut WhatsApp.</p>
+          </div>
+          <div class="cta-actions d-flex gap-2 flex-wrap">
+            <a class="btn-primary-custom"
+              href="https://wa.me/6281200000000?text=Halo%20BUNDAKU,%20saya%20mau%20pesan%20produk%20kue%20Hari%20Raya.%20Bisa%20dibantu%3F"
+              target="_blank" rel="noopener">
+              <i class="fa-brands fa-whatsapp"></i> Pesan via WhatsApp
+            </a>
+            <button class="btn-cta-outline" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartCanvas" aria-label="Buka Keranjang">
+              <i class="fa-solid fa-cart-shopping"></i> Buka Keranjang
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+
+  <!-- FOOTER (JANGAN DIUBAH) -->
   <footer class="py-5 bg-light mt-4" id="contact">
     <div class="container">
       <div class="row g-4 align-items-start">
@@ -558,7 +736,7 @@
     </div>
   </footer>
 
-  <!-- WA FLOAT (SAMA) -->
+  <!-- WA FLOAT (JANGAN DIUBAH) -->
   <div class="wa-float" aria-label="WhatsApp BUNDAKU">
     <span class="wa-tooltip">Chat WhatsApp untuk order</span>
     <a class="wa-btn"
@@ -568,7 +746,8 @@
     </a>
   </div>
 
-  <!-- MODAL + OFFCANVAS (SAMA / disesuaikan agar search ngefilter produk di page ini) -->
+  <!-- MODAL + OFFCANVAS (TETAP) -->
+
   <!-- Search Modal -->
   <div class="modal fade" id="searchModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
@@ -659,6 +838,45 @@
     </div>
   </div>
 
+  <!-- PRODUCT DETAIL MODAL (BARU) -->
+  <div class="modal fade" id="productDetailModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content rounded-4">
+        <div class="modal-header">
+          <h5 class="modal-title">Detail Produk</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-4 align-items-start">
+            <div class="col-md-5">
+              <img id="pdImg" class="img-fluid rounded-4 border" src="" alt="Detail Produk" loading="lazy" decoding="async">
+            </div>
+            <div class="col-md-7">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="badge text-bg-light border" id="pdCat">Kategori</span>
+                <span class="badge text-bg-light border">BUNDAKU</span>
+              </div>
+              <h3 class="mb-2" style="font-weight:900;" id="pdName">Nama Produk</h3>
+              <div class="mb-3" style="font-weight:900; font-size:1.25rem;" id="pdPrice">Rp 0</div>
+              <p class="text-muted" id="pdDesc">Deskripsi produk...</p>
+
+              <div class="d-flex gap-2 flex-wrap mt-4">
+                <button type="button" class="btn btn-danger px-4 rounded-pill" id="pdAddBtn">
+                  <i class="fa-solid fa-bag-shopping me-1"></i> Tambah ke Keranjang
+                </button>
+                <button type="button" class="btn btn-outline-dark px-4 rounded-pill" data-bs-dismiss="modal">
+                  Tutup
+                </button>
+              </div>
+
+              <small class="text-muted d-block mt-3">*Harga dapat berubah sesuai periode promo / paket.</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
   <script>
@@ -723,7 +941,7 @@
     function addToCart(name, price) {
       const found = cart.find(x => x.name === name);
       if (found) found.qty += 1;
-      else cart.push({ name, price: Number(price), qty: 1 });
+      else cart.push({ name, price: Number(price) || 0, qty: 1 });
       saveCart();
       updateBadge();
       renderCart();
@@ -765,12 +983,13 @@
       });
     }
 
+    // Tambah keranjang: pakai delegation biar aman kalau item ditambah
     function bindAddButtons() {
-      document.querySelectorAll('.btn-add-cart').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-          e.preventDefault();
-          addToCart(btn.getAttribute('data-name'), btn.getAttribute('data-price'));
-        });
+      document.addEventListener('click', (e) => {
+        const btn = e.target.closest('.btn-add-cart');
+        if (!btn) return;
+        e.preventDefault();
+        addToCart(btn.getAttribute('data-name'), btn.getAttribute('data-price'));
       });
     }
 
@@ -864,6 +1083,50 @@
       });
     }
 
+    // Detail Produk Modal
+    function bindProductDetailModal() {
+      const modalEl = document.getElementById('productDetailModal');
+      const pdImg = document.getElementById('pdImg');
+      const pdCat = document.getElementById('pdCat');
+      const pdName = document.getElementById('pdName');
+      const pdPrice = document.getElementById('pdPrice');
+      const pdDesc = document.getElementById('pdDesc');
+      const pdAddBtn = document.getElementById('pdAddBtn');
+
+      if (!modalEl) return;
+
+      let currentName = '';
+      let currentPrice = 0;
+
+      modalEl.addEventListener('show.bs.modal', (event) => {
+        const trigger = event.relatedTarget;
+        const item = trigger ? trigger.closest('.product-item') : null;
+        if (!item) return;
+
+        const name = item.getAttribute('data-name') || (item.querySelector('.food-title')?.textContent || 'Produk');
+        const price = Number(item.getAttribute('data-price')) || 0;
+        const img = item.getAttribute('data-img') || (item.querySelector('img')?.src || '');
+        const desc = item.getAttribute('data-desc') || 'Deskripsi belum tersedia.';
+        const cat = item.getAttribute('data-category') || 'ALL';
+
+        currentName = name;
+        currentPrice = price;
+
+        pdName.textContent = name;
+        pdPrice.textContent = formatRupiah(price);
+        pdDesc.textContent = desc;
+        pdCat.textContent = (cat.split(' ')[0] || cat);
+        pdImg.src = img;
+        pdImg.alt = `Foto ${name}`;
+      });
+
+      pdAddBtn?.addEventListener('click', () => {
+        if (!currentName) return;
+        addToCart(currentName, currentPrice);
+        alert(`"${currentName}" ditambahkan ke keranjang.`);
+      });
+    }
+
     document.addEventListener('DOMContentLoaded', () => {
       loadCart();
       updateBadge();
@@ -874,6 +1137,7 @@
       bindForms();
       bindCategoryFilter();
       bindSearch();
+      bindProductDetailModal();
     });
   </script>
 </body>
