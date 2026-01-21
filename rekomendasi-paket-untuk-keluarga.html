@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <title>Rekomendasi paket keluarga: isi pas, hemat, dan semua kebagian - BUNDAKU</title>
+  <meta name="description" content="Rekomendasi paket keluarga untuk Hari Raya: pilihan isi untuk 3-5 orang, 6-10 orang, hingga keluarga besar. Tips pilih kombinasi rasa & ukuran." />
+  <meta name="keywords" content="paket keluarga, hampers keluarga, paket kue lebaran, rekomendasi kue, kue hari raya, bundaku" />
+  <meta name="theme-color" content="#FB4A36" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <style>
+    :root{--primary:#FB4A36;--text:#131313;--bg:#FFFCF5;--font:'Lexend',sans-serif;}
+    body{font-family:var(--font);background:var(--bg);color:var(--text);overflow-x:hidden;}
+    a{text-decoration:none}
+    .navbar{padding-top:20px;background:transparent}
+    .navbar-brand{font-weight:700;font-size:1.5rem;color:var(--text)!important}
+    .nav-link{color:var(--text)!important;font-weight:400;margin:0 10px}
+    .nav-link:hover,.nav-link.active{color:var(--primary)!important}
+    .navbar-icons i{margin-left:15px;cursor:pointer;transition:.3s;position:relative}
+    .navbar-icons i:hover{color:var(--primary)}
+    .cart-badge{position:absolute;top:-8px;right:-10px;font-size:.65rem;padding:2px 6px;border-radius:999px;background:var(--primary);color:#fff;display:none;min-width:18px;text-align:center;line-height:1.2}
+
+    .article-hero{padding:70px 0 18px}
+    .tagline{display:inline-block;background:#fff;border:1px solid rgba(0,0,0,.06);padding:6px 14px;border-radius:999px;font-size:.75rem;letter-spacing:1.5px;text-transform:uppercase;color:#8a8a8a;margin-bottom:14px}
+    h1{font-weight:900;font-size:3rem;line-height:1.05;margin-bottom:10px}
+    .meta{color:#6a6a6a;font-size:.95rem}
+    .hero-card{background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:18px;padding:14px;box-shadow:0 14px 30px rgba(0,0,0,.04)}
+    figure{margin:0}
+    .hero-img{width:100%;height:380px;object-fit:cover;border-radius:14px;border:1px solid rgba(0,0,0,.06);background:#eee;display:block}
+    figcaption{color:#7a7a7a;font-size:.9rem;margin-top:10px}
+
+    .content-wrap{padding:18px 0 30px}
+    .article-card{background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:18px;padding:18px;box-shadow:0 14px 30px rgba(0,0,0,.04)}
+    .article-card h2{font-weight:900;margin-top:20px}
+    .article-card h3{font-weight:800;margin-top:14px}
+    .article-card p{color:#5f5f5f;line-height:1.7}
+    .article-card ul{color:#5f5f5f;line-height:1.7}
+    blockquote{border-left:4px solid var(--primary);padding:12px 14px;background:rgba(251,74,54,.06);border-radius:12px;color:#444;margin:16px 0}
+    .img-support{width:100%;height:300px;object-fit:cover;border-radius:14px;border:1px solid rgba(0,0,0,.06);background:#eee;display:block}
+
+    .toc-box{position:sticky;top:18px}
+    details.toc{background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:18px;padding:14px;box-shadow:0 14px 30px rgba(0,0,0,.04)}
+    details.toc summary{font-weight:900;cursor:pointer;list-style:none}
+    details.toc summary::-webkit-details-marker{display:none}
+    .toc a{display:block;padding:6px 8px;border-radius:10px;color:#333;font-weight:600;font-size:.92rem}
+    .toc a:hover{background:rgba(0,0,0,.04);color:var(--primary)}
+    .toc .toc-h3{padding-left:18px;font-weight:600;color:#555}
+
+    .share-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+    .share-btn{display:inline-flex;align-items:center;gap:10px;border-radius:999px;padding:10px 14px;border:1px solid rgba(0,0,0,.10);background:#fff;font-weight:900;color:#131313;box-shadow:0 12px 24px rgba(0,0,0,.06);transition:.2s}
+    .share-btn:hover{transform:translateY(-1px);color:var(--primary);border-color:rgba(251,74,54,.35)}
+    .mini-note{font-size:.88rem;color:#7a7a7a;margin-top:8px}
+
+    .baca-juga{border:1px dashed rgba(0,0,0,.18);border-radius:16px;padding:14px;margin:18px 0;background:#fff}
+    .baca-juga h5{font-weight:900;margin:0 0 10px}
+    .baca-juga a{display:block;font-weight:800;color:#131313;padding:6px 0}
+    .baca-juga a:hover{color:var(--primary)}
+
+    .promo-gif{width:100%;max-height:280px;object-fit:cover;border-radius:14px;border:1px solid rgba(0,0,0,.06);background:#eee}
+
+    .author-box{display:flex;gap:14px;align-items:flex-start;border:1px solid rgba(0,0,0,.06);border-radius:18px;padding:14px;background:#fff;margin-top:18px}
+    .author-avatar{width:64px;height:64px;border-radius:50%;object-fit:cover;border:1px solid rgba(0,0,0,.08);background:#eee}
+    .author-name{font-weight:900;margin:0}
+    .author-role{color:#7a7a7a;margin:2px 0 8px;font-size:.92rem}
+    .author-bio{color:#5f5f5f;margin:0;line-height:1.6}
+
+    .related-wrap{padding:16px 0 28px}
+    .rel-card{background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:18px;padding:14px;box-shadow:0 14px 30px rgba(0,0,0,.04);height:100%}
+    .rel-thumb{width:100%;height:150px;object-fit:cover;border-radius:14px;border:1px solid rgba(0,0,0,.06);background:#eee;margin-bottom:10px}
+    .rel-title{font-weight:900;margin:0 0 6px}
+    .rel-desc{color:#6a6a6a;margin:0 0 12px;line-height:1.5}
+    .btn-read{display:inline-flex;align-items:center;gap:8px;font-weight:900;border-radius:999px;padding:10px 14px;border:1px solid rgba(0,0,0,.10);background:#fff;color:#131313}
+    .btn-read:hover{color:var(--primary);border-color:rgba(251,74,54,.35);background:rgba(251,74,54,.06)}
+
+    .wa-float{position:fixed;right:18px;bottom:18px;z-index:9999;display:flex;align-items:center;gap:10px}
+    .wa-float .wa-tooltip{background:#fff;border:1px solid rgba(0,0,0,.06);box-shadow:0 10px 25px rgba(0,0,0,.08);padding:10px 12px;border-radius:14px;font-size:.85rem;color:#333;display:none;white-space:nowrap}
+    .wa-float:hover .wa-tooltip{display:inline-block}
+    .wa-float .wa-btn{width:54px;height:54px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;background:#25D366;color:#fff;border:none;box-shadow:0 15px 25px rgba(0,0,0,.15);transition:transform .2s ease}
+    .wa-float .wa-btn:hover{transform:translateY(-2px)}
+
+    @media(max-width:991px){
+      h1{font-size:2.15rem}
+      .hero-img{height:300px}
+      .toc-box{position:static}
+      .navbar-collapse{background:#fff;padding:20px;border-radius:10px;margin-top:10px;box-shadow:0 5px 20px rgba(0,0,0,.1)}
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAVBAR (sama) -->
+  <nav class="navbar navbar-expand-lg" id="home">
+    <div class="container">
+      <a class="navbar-brand" href="index.html#home" aria-label="BUNDAKU Beranda">
+        <i class="fa-solid fa-cookie-bite text-danger"></i> BUNDAKU
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigasi">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="tentang-kami.html">Tentang Kami</a></li>
+          <li class="nav-item"><a class="nav-link" href="produk.html">Produk</a></li>
+          <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+
+      <div class="navbar-icons d-none d-lg-block">
+        <i class="fa-solid fa-magnifying-glass" role="button" tabindex="0" aria-label="Cari artikel"
+          data-bs-toggle="modal" data-bs-target="#searchModal"></i>
+        <i class="fa-solid fa-cart-shopping" role="button" tabindex="0" aria-label="Keranjang"
+          data-bs-toggle="offcanvas" data-bs-target="#cartCanvas">
+          <span class="cart-badge" id="cartBadge">0</span>
+        </i>
+        <i class="fa-regular fa-user" role="button" tabindex="0" aria-label="Akun"
+          data-bs-toggle="modal" data-bs-target="#accountModal"></i>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="article-hero">
+    <div class="container">
+      <div class="tagline">Jan 2026 • Paket</div>
+      <h1>Rekomendasi paket keluarga: isi pas, hemat, dan semua kebagian</h1>
+      <div class="meta">
+        <i class="fa-regular fa-calendar me-2"></i>21 Jan 2026
+        <span class="mx-2">•</span>
+        <i class="fa-regular fa-clock me-2"></i>6 menit baca
+        <span class="mx-2">•</span>
+        <i class="fa-regular fa-folder-open me-2"></i>Paket Keluarga
+      </div>
+
+      <div class="mini-note" id="copyMsg"></div>
+
+      <div class="hero-card mt-3">
+        <figure>
+          <img class="hero-img"
+            src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=1400&q=80"
+            alt="Ilustrasi kue dan sajian keluarga saat hari raya" loading="lazy" decoding="async" />
+          <figcaption><b>Deskripsi foto:</b> Paket keluarga yang pas biasanya campuran manis-gurih, ukurannya cukup untuk tamu, dan mudah disajikan.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENT + TOC -->
+  <section class="content-wrap">
+    <div class="container">
+      <div class="row g-3">
+        <div class="col-lg-8">
+          <div class="article-card" id="articleContent">
+            <p>
+              Beli kue Hari Raya untuk keluarga itu tricky: kalau kebanyakan jadi sisa, kalau sedikit jadi rebutan.
+              Biar lebih gampang, ini rekomendasi paket keluarga berdasarkan jumlah orang dan kebiasaan tamu.
+              Kamu juga bisa pakai rumus sederhana: <b>campur manis + gurih + satu “kue premium”</b> biar lengkap.
+            </p>
+
+            <!-- PROMO GIF #1 -->
+            <figure class="mt-3">
+              <img class="promo-gif"
+                src="https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif"
+                alt="GIF promosi paket keluarga" loading="lazy" decoding="async" />
+              <figcaption><b>Deskripsi GIF:</b> Promo paket keluarga (contoh). Ganti dengan GIF brand kamu.</figcaption>
+            </figure>
+
+            <h2>Cara cepat pilih paket keluarga (biar tidak salah beli)</h2>
+            <p>
+              Sebelum pilih, jawab 3 pertanyaan ini:
+            </p>
+            <ul>
+              <li><b>Jumlah orang di rumah:</b> 3–5, 6–10, atau lebih?</li>
+              <li><b>Tamu ramai atau santai?</b> (rumah sering dikunjungi atau jarang)</li>
+              <li><b>Preferensi rasa:</b> dominan manis, gurih, atau seimbang?</li>
+            </ul>
+
+            <h3>Komposisi ideal: 2 kue favorit + 1 variasi + 1 premium</h3>
+            <p>
+              Biasanya keluarga punya dua kue “pasti habis” (misalnya nastar & kastengel).
+              Tambahkan satu variasi untuk selingan, lalu satu item premium untuk momen spesial (misalnya lapis legit).
+            </p>
+
+            <blockquote>
+              “Paket keluarga yang paling aman itu yang seimbang: ada yang manis, ada yang gurih, dan ada satu yang istimewa buat suguhan utama.”
+            </blockquote>
+
+            <h2>Rekomendasi Paket A: Keluarga kecil (3–5 orang)</h2>
+            <p>
+              Cocok untuk rumah yang tamunya tidak terlalu ramai, tapi tetap ingin meja suguhan terlihat lengkap.
+            </p>
+            <ul>
+              <li><b>1 toples Nastar</b> (favorit manis, mudah disukai)</li>
+              <li><b>1 toples Kastengel</b> (gurih, cepat habis)</li>
+              <li><b>1 toples Varian Selingan</b> (misalnya cookies cokelat / putri salju)</li>
+            </ul>
+
+            <h3>Tips hemat untuk Paket A</h3>
+            <p>
+              Pilih ukuran “medium” untuk dua favorit, lalu ukuran kecil untuk varian selingan.
+              Kalau masih ingin premium: tambahkan lapis legit ukuran kecil sebagai “centerpiece”.
+            </p>
+
+            <h2>Rekomendasi Paket B: Keluarga sedang (6–10 orang)</h2>
+            <p>
+              Ini paket “paling aman” untuk mayoritas keluarga, apalagi jika rumah cukup sering menerima tamu.
+            </p>
+            <ul>
+              <li><b>2 toples favorit</b>: Nastar + Kastengel (ukuran medium/large)</li>
+              <li><b>1 toples manis ringan</b>: putri salju / sagu keju</li>
+              <li><b>1 item premium</b>: Lapis Legit (ukuran kecil/medium)</li>
+            </ul>
+
+            <h3>Kalau tamu ramai</h3>
+            <p>
+              Gandakan salah satu yang paling cepat habis (biasanya kastengel atau nastar).
+              Trik: tambah 1 toples “snack” (cookies) untuk penyeimbang.
+            </p>
+
+            <!-- GAMBAR PENDUKUNG -->
+            <figure class="mt-3">
+              <img class="img-support"
+                src="https://images.unsplash.com/photo-1604908554022-12f95a6f12e8?auto=format&fit=crop&w=1400&q=80"
+                alt="Kue untuk suguhan keluarga" loading="lazy" decoding="async" />
+              <figcaption><b>Deskripsi gambar:</b> Kombinasi manis-gurih + satu premium membuat meja suguhan terlihat lengkap dan variatif.</figcaption>
+            </figure>
+
+            <h2>Rekomendasi Paket C: Keluarga besar (10+ orang / banyak tamu)</h2>
+            <p>
+              Untuk rumah yang “open house” atau jadi titik kumpul keluarga. Fokus pada volume dan variasi.
+            </p>
+            <ul>
+              <li><b>2–3 toples favorit</b>: Nastar + Kastengel + (optional) cookies</li>
+              <li><b>2 toples variasi</b>: putri salju + sagu keju / kacang</li>
+              <li><b>1–2 item premium</b>: Lapis Legit (medium) + (optional) brownies/roll cake (jika ada)</li>
+            </ul>
+
+            <h3>Kunci Paket C: stok & penataan</h3>
+            <p>
+              Taruh toples favorit di depan (mudah diambil), sisanya di samping sebagai cadangan.
+              Dengan begitu, meja selalu terlihat penuh tanpa harus buka semua sekaligus.
+            </p>
+
+            <h2>Rekomendasi Paket “Anti Ribet” (kalau kamu mau praktis)</h2>
+            <ul>
+              <li><b>1 paket mix</b> (isi 3 varian kue kering)</li>
+              <li><b>1 item premium</b> (lapis legit ukuran kecil)</li>
+              <li><b>1 packaging gift-ready</b> untuk jaga-jaga kalau ada tamu yang mau dibawakan pulang</li>
+            </ul>
+
+            <h2>Tips penyajian biar kue tidak cepat habis / tidak melempem</h2>
+            <h3>Buka bertahap</h3>
+            <p>
+              Jangan buka semua toples sekaligus. Buka 2–3 dulu, sisanya cadangan.
+              Ini menjaga renyah dan mengurangi risiko “habis sebelum waktunya”.
+            </p>
+
+            <h3>Sediakan sendok kecil / penjepit</h3>
+            <p>
+              Selain lebih rapi, kue juga tidak cepat lembap karena tangan masuk-keluar toples terus.
+            </p>
+
+            <div class="baca-juga" aria-label="Baca juga">
+              <h5><i class="fa-regular fa-bookmark me-2"></i>Baca Juga</h5>
+              <a href="artikel-7-tips-po.html">Tips pesan PO Hari Raya biar aman & kebagian</a>
+              <a href="artikel-3-simpan-kue.html">Cara menyimpan kue kering biar tetap renyah</a>
+            </div>
+
+            <!-- PROMO GIF #2 -->
+            <figure class="mt-3">
+              <img class="promo-gif"
+                src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif"
+                alt="GIF promosi order WhatsApp" loading="lazy" decoding="async" />
+              <figcaption><b>Deskripsi GIF:</b> CTA order via WhatsApp (contoh). Silakan ganti dengan GIF kampanye kamu.</figcaption>
+            </figure>
+
+            <h2>FAQ</h2>
+            <div class="accordion" id="faqAcc">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="q1">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a1">
+                    Kalau keluarga tidak terlalu suka manis, paketnya gimana?
+                  </button>
+                </h2>
+                <div id="a1" class="accordion-collapse collapse show" data-bs-parent="#faqAcc">
+                  <div class="accordion-body">
+                    Perbanyak varian gurih (kastengel, sagu keju) dan pilih satu manis ringan (cookies). Item premium bisa tetap lapis legit ukuran kecil untuk momen spesial.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="q2">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2">
+                    Berapa toples ideal untuk rumah yang tamunya ramai?
+                  </button>
+                </h2>
+                <div id="a2" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+                  <div class="accordion-body">
+                    Minimal 4–6 toples (kombinasi favorit + variasi) dan 1 item premium. Kalau open house besar, siapkan cadangan 1–2 toples favorit.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="q3">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3">
+                    Bisa mix varian dalam satu paket?
+                  </button>
+                </h2>
+                <div id="a3" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+                  <div class="accordion-body">
+                    Bisa (jika toko menyediakan). Mix varian cocok untuk keluarga yang seleranya beragam dan ingin praktis tanpa pilih satu-satu.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <h2>Kesimpulan</h2>
+            <p>
+              Rekomendasi paket keluarga paling aman adalah kombinasi <b>manis + gurih + variasi</b>, lalu tambah <b>1 item premium</b> kalau ingin meja suguhan lebih spesial.
+              Sesuaikan jumlah toples dengan jumlah orang dan keramaian tamu, dan buka kue bertahap supaya tetap renyah.
+            </p>
+
+            <!-- Profil Penulis -->
+            <div class="author-box" aria-label="Profil penulis">
+              <img class="author-avatar"
+                src="https://images.unsplash.com/photo-1552058544-f2b08422138a?auto=format&fit=crop&w=300&q=80"
+                alt="Foto penulis" loading="lazy" decoding="async" />
+              <div>
+                <p class="author-name">Kak Arga</p>
+                <div class="author-role">Product &amp; Bundle Curator • BUNDAKU</div>
+                <p class="author-bio">
+                  Menyusun rekomendasi paket berdasarkan kebiasaan keluarga, variasi rasa, dan porsi yang paling “pas” untuk momen Hari Raya.
+                </p>
+              </div>
+            </div>
+            <div class="share-row" aria-label="Bagikan artikel">
+              <a class="share-btn" id="shareWA" href="#" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+              <a class="share-btn" id="shareFB" href="#" target="_blank" rel="noopener"><i class="fa-brands fa-facebook"></i> Facebook</a>
+              <a class="share-btn" id="shareX"  href="#" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i> X</a>
+              <a class="share-btn" id="shareIN" href="#" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+              <button class="share-btn" id="copyLink" type="button"><i class="fa-regular fa-copy"></i> Copy Link</button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- TOC -->
+        <div class="col-lg-4">
+          <div class="toc-box">
+            <details class="toc" open>
+              <summary><i class="fa-solid fa-list me-2"></i>Daftar Isi (TOC)</summary>
+              <nav class="toc mt-2" id="toc"></nav>
+            </details>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 ARTIKEL TERKAIT -->
+  <section class="related-wrap">
+    <div class="container">
+      <h3 class="mb-3" style="font-weight:900;">Artikel Terkait</h3>
+      <div class="row g-3">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="rel-card">
+            <img class="rel-thumb" src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=1200&q=80" alt="Tips PO" loading="lazy" decoding="async" />
+            <div class="rel-title">Tips pesan PO Hari Raya biar aman &amp; kebagian</div>
+            <div class="rel-desc">Waktu terbaik order, data yang harus disiapkan, dan cara cek pengiriman.</div>
+            <a class="btn-read" href="artikel-7-tips-po.html">Baca Selengkapnya <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="rel-card">
+            <img class="rel-thumb" src="https://images.unsplash.com/photo-1604908554022-12f95a6f12e8?auto=format&fit=crop&w=1200&q=80" alt="Lapis legit" loading="lazy" decoding="async" />
+            <div class="rel-title">Kenapa Lapis Legit disebut kue premium?</div>
+            <div class="rel-desc">Proses berlapis, bahan berkualitas, dan teknik oven yang bikin rasanya beda.</div>
+            <a class="btn-read" href="artikel-10-lapis-legit.html">Baca Selengkapnya <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="rel-card">
+            <img class="rel-thumb" src="https://images.unsplash.com/photo-1601972599720-bd8c65f9a5e5?auto=format&fit=crop&w=1200&q=80" alt="Packing aman" loading="lazy" decoding="async" />
+            <div class="rel-title">Packing aman: biar toples tidak remuk saat kirim</div>
+            <div class="rel-desc">Sekat, bubble wrap, sealing, dan tips handling kurir.</div>
+            <a class="btn-read" href="artikel-8-packing-aman.html">Baca Selengkapnya <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER (sama) -->
+  <footer class="py-5 bg-light mt-4" id="contact">
+    <div class="container">
+      <div class="row g-4 align-items-start">
+        <div class="col-md-4">
+          <h5 class="mb-3"><i class="fa-solid fa-cookie-bite text-danger"></i> BUNDAKU</h5>
+          <p class="text-muted mb-3">Toko kue Hari Raya yang fokus pada rasa, kualitas, dan kemasan hampers yang elegan.</p>
+          <div class="d-flex gap-3">
+            <a href="#" class="text-dark" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="text-dark" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="text-dark" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <h6 class="mb-3">Kontak</h6>
+          <p class="text-muted mb-1"><i class="fa-solid fa-location-dot me-2"></i> Jalan Kue No. 1, Jakarta</p>
+          <p class="text-muted mb-1"><i class="fa-solid fa-clock me-2"></i> 08.00 - 21.00 (Setiap Hari)</p>
+          <p class="text-muted mb-3"><i class="fa-solid fa-phone me-2"></i> +62 000-0000-0000</p>
+          </div>
+
+        <div class="col-md-4">
+          <h6 class="mb-3">Berlangganan Promo</h6>
+          <p class="text-muted">Dapatkan info promo hampers dan jadwal PO kue Hari Raya.</p>
+          <form id="subscribeForm" class="d-flex gap-2">
+          </form>
+          <small class="text-muted d-block mt-2" id="subscribeMsg"></small>
+        </div>
+      </div>
+      <hr class="my-4" />
+      <div class="text-center">
+        <p class="mb-0 text-muted">&copy; 2026 BUNDAKU. Semua hak dilindungi.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WA FLOAT -->
+  <div class="wa-float" aria-label="WhatsApp BUNDAKU">
+    <span class="wa-tooltip">Chat WhatsApp untuk order</span>
+    <a class="wa-btn"
+      href="https://wa.me/6281200000000?text=Halo%20BUNDAKU,%20saya%20mau%20tanya%20produk%20dan%20PO%20Hari%20Raya.%20Bisa%20dibantu%3F"
+      target="_blank" rel="noopener noreferrer" aria-label="Chat WhatsApp">
+      <i class="fa-brands fa-whatsapp" style="font-size: 1.5rem;"></i>
+    </a>
+  </div>
+
+  <!-- MODAL + OFFCANVAS (sama) -->
+  <div class="modal fade" id="searchModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-4">
+        <div class="modal-header">
+          <h5 class="modal-title">Cari (Demo)</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+        </div>
+        <div class="modal-body">
+          <input type="text" class="form-control" id="searchInput" placeholder="Ketik kata kunci..." />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="accountModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-4">
+        <div class="modal-header">
+          <h5 class="modal-title">Akun</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+        </div>
+        <div class="modal-body">
+          <form id="loginForm">
+            <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" required placeholder="nama@email.com" />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Password</label>
+              <input type="password" class="form-control" required placeholder="••••••••" />
+            </div>
+            <button class="btn btn-danger w-100" type="submit">Masuk</button>
+            <small class="text-muted d-block mt-2">*Demo: tombol aktif, menampilkan notifikasi.</small>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="cartCanvas" aria-labelledby="cartCanvasLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="cartCanvasLabel">Keranjang</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Tutup"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div id="cartItems" class="mb-3"></div>
+      <div class="d-flex justify-content-between align-items-center border-top pt-3">
+        <strong>Total</strong>
+        <strong id="cartTotal">Rp 0</strong>
+      </div>
+      <button class="btn btn-danger w-100 mt-3" id="btnCheckout" type="button">Checkout</button>
+      <button class="btn btn-outline-dark w-100 mt-2" id="btnClearCart" type="button">Kosongkan Keranjang</button>
+      <small class="text-muted d-block mt-2">*Checkout demo: menampilkan ringkasan order.</small>
+    </div>
+  </div>
+
+  <div class="modal fade" id="contactModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-4">
+        <div class="modal-header">
+          <h5 class="modal-title">Kirim Pesan</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+        </div>
+        <div class="modal-body">
+          <form id="contactForm">
+            <div class="mb-3">
+              <label class="form-label">Nama</label>
+              <input type="text" class="form-control" required placeholder="Nama kamu" />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">No. WhatsApp</label>
+              <input type="tel" class="form-control" required placeholder="08xxxxxxxxxx" />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Pesan</label>
+              <textarea class="form-control" rows="3" required placeholder="Saya mau tanya..."></textarea>
+            </div>
+            <button class="btn btn-danger w-100" type="submit">Kirim</button>
+            <small class="text-muted d-block mt-2">*Demo: tombol aktif, menampilkan notifikasi.</small>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // ===== SHARE LINKS (AKTIF) =====
+    function setShareLinks() {
+      const url = encodeURIComponent(location.href);
+      const title = encodeURIComponent(document.title);
+
+      document.getElementById('shareWA').href = `https://wa.me/?text=${title}%20-%20${url}`;
+      document.getElementById('shareFB').href = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+      document.getElementById('shareX').href  = `https://twitter.com/intent/tweet?text=${title}&url=${url}`;
+      document.getElementById('shareIN').href = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
+
+      const copyBtn = document.getElementById('copyLink');
+      const msg = document.getElementById('copyMsg');
+      copyBtn.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(location.href);
+          msg.textContent = 'Link berhasil disalin ✅';
+        } catch (e) {
+          msg.textContent = 'Gagal salin link. Silakan salin manual dari address bar.';
+        }
+        setTimeout(()=> msg.textContent='', 2500);
+      });
+    }
+
+    // ===== TOC OTOMATIS (H2/H3) =====
+    function slugify(text){
+      return text.toLowerCase().trim()
+        .replace(/[^\w\s-]/g,'')
+        .replace(/\s+/g,'-')
+        .replace(/-+/g,'-');
+    }
+
+    function buildTOC() {
+      const container = document.getElementById('articleContent');
+      const toc = document.getElementById('toc');
+      if (!container || !toc) return;
+
+      const headings = container.querySelectorAll('h2, h3');
+      if (!headings.length) { toc.innerHTML = '<div class="text-muted">Tidak ada daftar isi.</div>'; return; }
+
+      const frag = document.createDocumentFragment();
+
+      headings.forEach(h => {
+        if(!h.id) h.id = slugify(h.textContent);
+        const a = document.createElement('a');
+        a.href = `#${h.id}`;
+        a.textContent = h.textContent;
+        if (h.tagName.toLowerCase() === 'h3') a.classList.add('toc-h3');
+        frag.appendChild(a);
+      });
+
+      toc.innerHTML = '';
+      toc.appendChild(frag);
+    }
+
+    // ===== CART (biar navbar sama) =====
+    function formatRupiah(num){ const n=Number(num)||0; return 'Rp '+n.toString().replace(/\B(?=(\d{3})+(?!\d))/g,'.');}
+    const CART_KEY='bundaku_cart_v1'; let cart=[];
+    function loadCart(){ try{ const raw=localStorage.getItem(CART_KEY); cart=raw?JSON.parse(raw):[]; }catch(e){cart=[];} }
+    function saveCart(){ localStorage.setItem(CART_KEY, JSON.stringify(cart)); }
+    function cartCount(){ return cart.reduce((s,i)=>s+i.qty,0); }
+    function cartTotal(){ return cart.reduce((s,i)=>s+(i.price*i.qty),0); }
+    function updateBadge(){
+      const badge=document.getElementById('cartBadge'); if(!badge) return;
+      const count=cartCount(); badge.textContent=count; badge.style.display=count>0?'inline-block':'none';
+    }
+    function renderCart(){
+      const wrap=document.getElementById('cartItems'); const totalEl=document.getElementById('cartTotal');
+      if(!wrap||!totalEl) return;
+      if(!cart.length){ wrap.innerHTML='<div class="text-muted">Keranjang masih kosong.</div>'; totalEl.textContent=formatRupiah(0); return; }
+      wrap.innerHTML=cart.map((item,idx)=>`
+        <div class="d-flex align-items-center justify-content-between border rounded-4 p-3 mb-2">
+          <div>
+            <div class="fw-semibold">${item.name}</div>
+            <div class="text-muted" style="font-size:0.9rem;">${formatRupiah(item.price)} x ${item.qty}</div>
+          </div>
+          <div class="d-flex align-items-center gap-2">
+            <button class="btn btn-sm btn-outline-dark" data-action="dec" data-idx="${idx}">-</button>
+            <button class="btn btn-sm btn-outline-dark" data-action="inc" data-idx="${idx}">+</button>
+            <button class="btn btn-sm btn-danger" data-action="del" data-idx="${idx}"><i class="fa-solid fa-trash"></i></button>
+          </div>
+        </div>`).join('');
+      totalEl.textContent=formatRupiah(cartTotal());
+    }
+    function bindCartActions(){
+      const cartItems=document.getElementById('cartItems');
+      const btnClear=document.getElementById('btnClearCart');
+      const btnCheckout=document.getElementById('btnCheckout');
+
+      cartItems && cartItems.addEventListener('click',(e)=>{
+        const btn=e.target.closest('button[data-action]'); if(!btn) return;
+        const action=btn.getAttribute('data-action'); const idx=Number(btn.getAttribute('data-idx'));
+        if(Number.isNaN(idx)||!cart[idx]) return;
+        if(action==='inc') cart[idx].qty+=1;
+        if(action==='dec') cart[idx].qty=Math.max(1,cart[idx].qty-1);
+        if(action==='del') cart.splice(idx,1);
+        saveCart(); updateBadge(); renderCart();
+      });
+
+      btnClear && btnClear.addEventListener('click',()=>{
+        cart=[]; saveCart(); updateBadge(); renderCart(); alert('Keranjang dikosongkan.');
+      });
+
+      btnCheckout && btnCheckout.addEventListener('click',()=>{
+        if(!cart.length){ alert('Keranjang masih kosong.'); return; }
+        const ringkasan=cart.map(x=>`- ${x.name} x ${x.qty} (${formatRupiah(x.price*x.qty)})`).join('\n');
+        alert(`Ringkasan Pesanan:\n${ringkasan}\n\nTotal: ${formatRupiah(cartTotal())}\n\nLanjutkan via WhatsApp untuk konfirmasi pembayaran/pengiriman.`);
+      });
+    }
+    function bindForms(){
+      const loginForm=document.getElementById('loginForm');
+      const contactForm=document.getElementById('contactForm');
+      const subscribeForm=document.getElementById('subscribeForm');
+      loginForm && loginForm.addEventListener('submit',(e)=>{e.preventDefault(); alert('Berhasil (demo): kamu sudah masuk.'); bootstrap.Modal.getInstance(document.getElementById('accountModal'))?.hide();});
+      contactForm && contactForm.addEventListener('submit',(e)=>{e.preventDefault(); alert('Pesan terkirim (demo). Untuk respon cepat, gunakan WhatsApp.'); bootstrap.Modal.getInstance(document.getElementById('contactModal'))?.hide();});
+      subscribeForm && subscribeForm.addEventListener('submit',(e)=>{e.preventDefault(); const msg=document.getElementById('subscribeMsg'); if(msg) msg.textContent='Terima kasih! Kamu sudah terdaftar untuk info promo.'; e.target.reset();});
+    }
+
+    document.addEventListener('DOMContentLoaded', ()=>{
+      setShareLinks();
+      buildTOC();
+
+      loadCart();
+      updateBadge();
+      renderCart();
+      bindCartActions();
+      bindForms();
+    });
+  </script>
+</body>
+</html>
