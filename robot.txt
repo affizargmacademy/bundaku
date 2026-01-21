@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Mencegah akses ke folder sistem/backend (jika ada)
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+
+# Pastikan folder aset TIDAK diblokir agar Google bisa merender Bootstrap
+# Allow: /assets/
+# Allow: /css/
+# Allow: /js/
+# Allow: /images/
+
+# Peta Situs Utama
+Sitemap: https://bundaku-smoky.vercel.app/sitemap.xml
